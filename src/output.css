@@ -811,6 +811,10 @@ video {
   width: 50%;
 }
 
+.w-\[70\%\] {
+  width: 70%;
+}
+
 .min-w-\[250px\] {
   min-width: 250px;
 }
@@ -837,6 +841,18 @@ video {
 
 .max-w-\[50\%\] {
   max-width: 50%;
+}
+
+.max-w-\[80\%\] {
+  max-width: 80%;
+}
+
+.max-w-\[0\%\] {
+  max-width: 0%;
+}
+
+.max-w-\[90\%\] {
+  max-width: 90%;
 }
 
 .translate-x-\[-10px\] {
@@ -1113,8 +1129,21 @@ video {
   padding-bottom: 9px;
 }
 
+.py-\[5px\] {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 .pt-\[40px\] {
   padding-top: 40px;
+}
+
+.pt-\[10px\] {
+  padding-top: 10px;
+}
+
+.pt-\[5px\] {
+  padding-top: 5px;
 }
 
 .text-center {
