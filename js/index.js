@@ -1,14 +1,18 @@
 const openCloseTop = document.getElementById('openCloseTop')
 const openCloseBottom = document.getElementById('openCloseBottom')
 
-let flagTop = true
 function openSidebarTop() {
-    openCloseTop.style.left = flagTop ? '0%' : '-100%'
-    flagTop = !flagTop
+    if (openCloseBottom.classList.contains('left-0')) {
+        openCloseBottom.classList.remove('left-0');
+    }
+
+    openCloseTop.classList.toggle('left-0');
 }
 
-let flagBottom = true
 function openSidebarBottom() {
-    openCloseBottom.style.left = flagBottom ? '0%' : '-100%'
-    flagBottom = !flagBottom
+    if (openCloseTop.classList.contains('left-0')) {
+        openCloseTop.classList.remove('left-0');
+    }
+
+    openCloseBottom.classList.toggle('left-0');
 }

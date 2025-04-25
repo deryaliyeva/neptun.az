@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="images.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -25,7 +26,7 @@
             <input type="text" placeholder="Məhsulu axtarın"
               class="py-[10px] text-[13px] max-xxs:text-[10px] max-sm:w-[280px] max-xxs:w-[150px] max-xs:w-[244px] max-xms:py-[5px] max-xxs:px-7 outline-none px-10 border border-[#ff8230] rounded-[20px] max-w-full w-[380px]" />
             <i
-              class="absolute top-30 px-3 text-[16px] max-xxs:text-[13px] left-[95] text-[#ff8230] fa-solid fa-magnifying-glass"></i>
+              class="absolute top-30 px-3 text-[16px] max-xxs:text-[13px] left-[95px] text-[#ff8230] fa-solid fa-magnifying-glass"></i>
             <div>
               <button
                 class="absolute top-[11px]  max-xxs:text-[10px] max-xms:top-[16px] right-0 max-xxs:py-[6px] max-xxs:top-[18px] bg-[#ff8230] text-white max-xms:py-[5px] py-[11px] max-xms:px-[10px] px-4 rounded-[20px] text-[14px]">Axtar</button>
@@ -56,297 +57,28 @@
       <div class="max-w-[1200px] flex justify-between h-12 mx-auto">
         <div
           class="bg-white max-w-full max-mds:hidden min-w-[250px] min-h-[640px] rounded-[7px] border-t-2 border-t-[#ff8230]">
-          <ul>
-            <li class="py-[19px] px-[7px] text-[15px] font-[600] text-[#ff8230]">
-              <a href="">
-                <i class="fa-solid text-[20px] px-2 fa-bars"></i>
-              </a>
-              <span>Kateqoriyalar</span>
-            </li>
+          <div class="py-[19px] px-[7px] text-[15px] font-[600] text-[#ff8230]">
+            <a href="">
+              <i class="fa-solid text-[20px] px-2 fa-bars"></i>
+            </a>
+            <span>Kateqoriyalar</span>
+          </div>
 
-            <li
-              class="group relative py-[10px] px-[15px] flex items-center justify-start hover:bg-orange-200 transition-all">
-              <a href="">
-                <img class="max-w-full w-[16px]" src="img/Meyvə-və-tərəvəz.svg" alt="Meyvə" />
-              </a>
-              <div class="flex items-center justify-between gap-2 px-4 w-full">
-                <span class="text-[12px] cursor-pointer">Meyvə</span>
-                <i class="fa-solid text-[10px] fa-chevron-right"></i>
-              </div>
+          <ul id="menu"></ul>
 
-              <!-- Hoverin divi -->
-              <div
-                class="absolute top-0 left-full border-l-orange-500 border-l-2 w-0 h-0 overflow-hidden bg-white shadow-2xl text-[11px] text-black opacity-0 translate-x-[-10px] transition-all duration-300 ease-in-out group-hover:w-[160px] group-hover:h-[140px] group-hover:p-2 group-hover:opacity-100 group-hover:translate-x-0">
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-              </div>
-            </li>
+          <div class="py-[10px] px-[15px] bg-[#ff8230] rounded-b-[7px] flex items-center justify-start">
+            <a href="">
+              <img class="max-w-full w-[16px]" src="img/Aksiyalar.svg" alt="Aksiyalar" />
+            </a>
+            <span class="text-[12px] text-white px-5 cursor-pointer">Kampaniyalar</span>
+          </div>
 
-            <hr>
-
-            <li
-              class="group relative py-[10px] px-[15px] flex items-center justify-start hover:bg-orange-200 transition-all">
-              <a href="">
-                <img class="max-w-full w-[16px]" src="img/Meyvə-və-tərəvəz.svg" alt="Meyvə" />
-              </a>
-              <div class="flex items-center justify-between gap-2 px-4 w-full">
-                <span class="text-[12px] cursor-pointer">Meyvə</span>
-                <i class="fa-solid text-[10px] fa-chevron-right"></i>
-              </div>
-
-              <!-- Hoverin divi -->
-              <div
-                class="absolute top-0 left-full border-l-orange-500 border-l-2 w-0 h-0 overflow-hidden bg-white shadow-2xl text-[11px] text-black opacity-0 translate-x-[-10px] transition-all duration-300 ease-in-out group-hover:w-[160px] group-hover:h-[140px] group-hover:p-2 group-hover:opacity-100 group-hover:translate-x-0">
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-              </div>
-            </li>
-
-            <hr>
-            <li
-              class="group relative py-[10px] px-[15px] flex items-center justify-start hover:bg-orange-200 transition-all">
-              <a href="">
-                <img class="max-w-full w-[16px]" src="img/Meyvə-və-tərəvəz.svg" alt="Meyvə" />
-              </a>
-              <div class="flex items-center justify-between gap-2 px-4 w-full">
-                <span class="text-[12px] cursor-pointer">Meyvə</span>
-                <i class="fa-solid text-[10px] fa-chevron-right"></i>
-              </div>
-
-              <!-- Hoverin divi -->
-              <div
-                class="absolute top-0 left-full border-l-orange-500 border-l-2 w-0 h-0 overflow-hidden bg-white shadow-2xl text-[11px] text-black opacity-0 translate-x-[-10px] transition-all duration-300 ease-in-out group-hover:w-[160px] group-hover:h-[140px] group-hover:p-2 group-hover:opacity-100 group-hover:translate-x-0">
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-              </div>
-            </li>
-
-            <hr>
-            <li
-              class="group relative py-[10px] px-[15px] flex items-center justify-start hover:bg-orange-200 transition-all">
-              <a href="">
-                <img class="max-w-full w-[16px]" src="img/Meyvə-və-tərəvəz.svg" alt="Meyvə" />
-              </a>
-              <div class="flex items-center justify-between gap-2 px-4 w-full">
-                <span class="text-[12px] cursor-pointer">Meyvə</span>
-                <i class="fa-solid text-[10px] fa-chevron-right"></i>
-              </div>
-
-              <!-- Hoverin divi -->
-              <div
-                class="absolute top-0 left-full border-l-orange-500 border-l-2 w-0 h-0 overflow-hidden bg-white shadow-2xl text-[11px] text-black opacity-0 translate-x-[-10px] transition-all duration-300 ease-in-out group-hover:w-[160px] group-hover:h-[140px] group-hover:p-2 group-hover:opacity-100 group-hover:translate-x-0">
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-              </div>
-            </li>
-
-            <hr>
-            <li
-              class="group relative py-[10px] px-[15px] flex items-center justify-start hover:bg-orange-200 transition-all">
-              <a href="">
-                <img class="max-w-full w-[16px]" src="img/Meyvə-və-tərəvəz.svg" alt="Meyvə" />
-              </a>
-              <div class="flex items-center justify-between gap-2 px-4 w-full">
-                <span class="text-[12px] cursor-pointer">Meyvə</span>
-                <i class="fa-solid text-[10px] fa-chevron-right"></i>
-              </div>
-
-              <!-- Hoverin divi -->
-              <div
-                class="absolute top-0 left-full border-l-orange-500 border-l-2 w-0 h-0 overflow-hidden bg-white shadow-2xl text-[11px] text-black opacity-0 translate-x-[-10px] transition-all duration-300 ease-in-out group-hover:w-[160px] group-hover:h-[140px] group-hover:p-2 group-hover:opacity-100 group-hover:translate-x-0">
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-              </div>
-            </li>
-
-            <hr>
-            <li
-              class="group relative py-[10px] px-[15px] flex items-center justify-start hover:bg-orange-200 transition-all">
-              <a href="">
-                <img class="max-w-full w-[16px]" src="img/Meyvə-və-tərəvəz.svg" alt="Meyvə" />
-              </a>
-              <div class="flex items-center justify-between gap-2 px-4 w-full">
-                <span class="text-[12px] cursor-pointer">Meyvə</span>
-                <i class="fa-solid text-[10px] fa-chevron-right"></i>
-              </div>
-
-              <!-- Hoverin divi -->
-              <div
-                class="absolute top-0 left-full border-l-orange-500 border-l-2 w-0 h-0 overflow-hidden bg-white shadow-2xl text-[11px] text-black opacity-0 translate-x-[-10px] transition-all duration-300 ease-in-out group-hover:w-[160px] group-hover:h-[140px] group-hover:p-2 group-hover:opacity-100 group-hover:translate-x-0">
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-              </div>
-            </li>
-            <hr>
-            <li
-              class="group relative py-[10px] px-[15px] flex items-center justify-start hover:bg-orange-200 transition-all">
-              <a href="">
-                <img class="max-w-full w-[16px]" src="img/Meyvə-və-tərəvəz.svg" alt="Meyvə" />
-              </a>
-              <div class="flex items-center justify-between gap-2 px-4 w-full">
-                <span class="text-[12px] cursor-pointer">Meyvə</span>
-                <i class="fa-solid text-[10px] fa-chevron-right"></i>
-              </div>
-
-              <!-- Hoverin divi -->
-              <div
-                class="absolute top-0 left-full border-l-orange-500 border-l-2 w-0 h-0 overflow-hidden bg-white shadow-2xl text-[11px] text-black opacity-0 translate-x-[-10px] transition-all duration-300 ease-in-out group-hover:w-[160px] group-hover:h-[140px] group-hover:p-2 group-hover:opacity-100 group-hover:translate-x-0">
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-              </div>
-            </li>
-
-            <hr>
-            <li
-              class="group relative py-[10px] px-[15px] flex items-center justify-start hover:bg-orange-200 transition-all">
-              <a href="">
-                <img class="max-w-full w-[16px]" src="img/Meyvə-və-tərəvəz.svg" alt="Meyvə" />
-              </a>
-              <div class="flex items-center justify-between gap-2 px-4 w-full">
-                <span class="text-[12px] cursor-pointer">Meyvə</span>
-                <i class="fa-solid text-[10px] fa-chevron-right"></i>
-              </div>
-
-              <!-- Hoverin divi -->
-              <div
-                class="absolute top-0 left-full border-l-orange-500 border-l-2 w-0 h-0 overflow-hidden bg-white shadow-2xl text-[11px] text-black opacity-0 translate-x-[-10px] transition-all duration-300 ease-in-out group-hover:w-[160px] group-hover:h-[140px] group-hover:p-2 group-hover:opacity-100 group-hover:translate-x-0">
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-              </div>
-            </li>
-
-            <hr>
-            <li
-              class="group relative py-[10px] px-[15px] flex items-center justify-start hover:bg-orange-200 transition-all">
-              <a href="">
-                <img class="max-w-full w-[16px]" src="img/Meyvə-və-tərəvəz.svg" alt="Meyvə" />
-              </a>
-              <div class="flex items-center justify-between gap-2 px-4 w-full">
-                <span class="text-[12px] cursor-pointer">Meyvə</span>
-                <i class="fa-solid text-[10px] fa-chevron-right"></i>
-              </div>
-
-              <!-- Hoverin divi -->
-              <div
-                class="absolute top-0 left-full border-l-orange-500 border-l-2 w-0 h-0 overflow-hidden bg-white shadow-2xl text-[11px] text-black opacity-0 translate-x-[-10px] transition-all duration-300 ease-in-out group-hover:w-[160px] group-hover:h-[140px] group-hover:p-2 group-hover:opacity-100 group-hover:translate-x-0">
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-              </div>
-            </li>
-
-            <hr>
-            <li
-              class="group relative py-[10px] px-[15px] flex items-center justify-start hover:bg-orange-200 transition-all">
-              <a href="">
-                <img class="max-w-full w-[16px]" src="img/Meyvə-və-tərəvəz.svg" alt="Meyvə" />
-              </a>
-              <div class="flex items-center justify-between gap-2 px-4 w-full">
-                <span class="text-[12px] cursor-pointer">Meyvə</span>
-                <i class="fa-solid text-[10px] fa-chevron-right"></i>
-              </div>
-
-              <!-- Hoverin divi -->
-              <div
-                class="absolute top-0 left-full border-l-orange-500 border-l-2 w-0 h-0 overflow-hidden bg-white shadow-2xl text-[11px] text-black opacity-0 translate-x-[-10px] transition-all duration-300 ease-in-out group-hover:w-[160px] group-hover:h-[140px] group-hover:p-2 group-hover:opacity-100 group-hover:translate-x-0">
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-              </div>
-            </li>
-
-            <hr>
-            <li
-              class="group relative py-[10px] px-[15px] flex items-center justify-start hover:bg-orange-200 transition-all">
-              <a href="">
-                <img class="max-w-full w-[16px]" src="img/Meyvə-və-tərəvəz.svg" alt="Meyvə" />
-              </a>
-              <div class="flex items-center justify-between gap-2 px-4 w-full">
-                <span class="text-[12px] cursor-pointer">Meyvə</span>
-                <i class="fa-solid text-[10px] fa-chevron-right"></i>
-              </div>
-
-              <!-- Hoverin divi -->
-              <div
-                class="absolute top-0 left-full border-l-orange-500 border-l-2 w-0 h-0 overflow-hidden bg-white shadow-2xl text-[11px] text-black opacity-0 translate-x-[-10px] transition-all duration-300 ease-in-out group-hover:w-[160px] group-hover:h-[140px] group-hover:p-2 group-hover:opacity-100 group-hover:translate-x-0">
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-              </div>
-            </li>
-
-            <hr>
-            <li
-              class="group relative py-[10px] px-[15px] flex items-center justify-start hover:bg-orange-200 transition-all">
-              <a href="">
-                <img class="max-w-full w-[16px]" src="img/Meyvə-və-tərəvəz.svg" alt="Meyvə" />
-              </a>
-              <div class="flex items-center justify-between gap-2 px-4 w-full">
-                <span class="text-[12px] cursor-pointer">Meyvə</span>
-                <i class="fa-solid text-[10px] fa-chevron-right"></i>
-              </div>
-
-              <!-- Hoverin divi -->
-              <div
-                class="absolute top-0 left-full border-l-orange-500 border-l-2 w-0 h-0 overflow-hidden bg-white shadow-2xl text-[11px] text-black opacity-0 translate-x-[-10px] transition-all duration-300 ease-in-out group-hover:w-[160px] group-hover:h-[140px] group-hover:p-2 group-hover:opacity-100 group-hover:translate-x-0">
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-              </div>
-            </li>
-
-            <hr>
-            <!--hover ve i yoxdur-->
-            <li class="py-[10px] px-[15px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
-              <a href="">
-                <img class="max-w-full w-[16px]" src="img/Meyvə-və-tərəvəz.svg" alt="Meyvə" />
-              </a>
-              <div class="flex items-center justify-between gap-2 px-4 w-full">
-                <span class="text-[12px] cursor-pointer">Meyvə</span>
-              </div>
-            </li>
-
-            <hr>
-            <li
-              class="group relative py-[10px] px-[15px] flex items-center justify-start hover:bg-orange-200 transition-all">
-              <a href="">
-                <img class="max-w-full w-[16px]" src="img/Meyvə-və-tərəvəz.svg" alt="Meyvə" />
-              </a>
-              <div class="flex items-center justify-between gap-2 px-4 w-full">
-                <span class="text-[12px] cursor-pointer">Meyvə</span>
-                <i class="fa-solid text-[10px] fa-chevron-right"></i>
-              </div>
-
-              <!-- Hoverin divi -->
-              <div
-                class="absolute top-0 left-full border-l-orange-500 border-l-2 w-0 h-0 overflow-hidden bg-white shadow-2xl text-[11px] text-black opacity-0 translate-x-[-10px] transition-all duration-300 ease-in-out group-hover:w-[160px] group-hover:h-[140px] group-hover:p-2 group-hover:opacity-100 group-hover:translate-x-0">
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-                <p class="px-2 py-1 hover:text-[#ff8230] hover:underline">Meyvə</p>
-              </div>
-            </li>
-            <hr>
-            <li class="py-[10px] px-[15px] bg-[#ff8230] rounded-b-[7px] flex items-center justify-start">
-              <a href="">
-                <img class="max-w-full w-[16px]" src="img/Aksiyalar.svg" alt="Aksiyalar" />
-              </a>
-              <span class="text-[12px] text-white px-5 cursor-pointer">Kampaniyalar</span>
-            </li>
-          </ul>
         </div>
 
         <!--alt sidebar-->
 
         <div id="openCloseBottom"
-          class="h-screen  max-w-full p-4 fixed z-50 top-[178px] left-[-100%] border w-[30%] bg-white transition-all duration-700 ease-in-out">
+          class="h-screen p-4 fixed z-50 top-[166px] left-[-100%] border max-w-[50%] bg-white transition-all duration-700 ease-in-out">
           <div onclick="openSidebarBottom()" class="px-4 py-4 flex items-center justify-end">
             <i class="text-[13px] fa-solid fa-xmark cursor-pointer"></i>
           </div>
@@ -475,7 +207,7 @@
 
         <!--ust sidebar-->
         <div id="openCloseTop"
-          class="h-screen  max-w-full p-4 fixed z-50 top-0 left-[-100%] border w-[40%] bg-white transition-all duration-700 ease-in-out">
+          class="h-screen  max-w-full p-4 fixed z-50 top-0 left-[-100%] border w-[50%] bg-white transition-all duration-700 ease-in-out">
           <div class="px-4 py-4 flex items-center justify-end">
             <i onclick="openSidebarTop()" class="text-[15px] fa-solid fa-xmark cursor-pointer"></i>
           </div>
@@ -560,10 +292,9 @@
 
   </header>
 
-  <!-- <main class="h-[610px] bg-fuchsia-400">
-    </main> -->
-
   <script src="js/index.js"></script>
+  <script src="services/api.js"></script>
+  <script src="js/header.js"></script>
 </body>
 
 </html>
