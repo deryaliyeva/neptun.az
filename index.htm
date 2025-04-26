@@ -5,15 +5,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Neptun Store</title>
-  <link rel="stylesheet" href="src/output.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="shortcut icon" href="images.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="src/output.css" />
+  <link rel="stylesheet" href="src/swiper.css">
+
 </head>
 
-<body>
-  <header>
+<body class="bg-[#F2F2F2]">
+  <header class="bg-white">
     <div class="px-[15px] py-[25px] text-gray-800">
       <div class="max-w-[1230px] max-lgs:max-w-[860px] flex justify-between h-16 mx-auto">
         <div class="flex gap-10 max-xms:gap-5 max-xs:gap-[5px] max-xxs:gap-0">
@@ -22,11 +25,11 @@
               class="max-w-full w-[270px] max-sm:max-w-[147px] max-xxs:max-w-[100px] max-xms:max-w-[122px] max-sm:min-h-[40px] min-h-[58px]"
               src="img/neptun-logo.png" alt="neptun-logo" />
           </a>
-          <div class="flex items-center relative">
+          <div class="flex items-center justify-start relative">
             <input type="text" placeholder="Məhsulu axtarın"
               class="py-[10px] text-[13px] max-xxs:text-[10px] max-sm:w-[280px] max-xxs:w-[150px] max-xs:w-[244px] max-xms:py-[5px] max-xxs:px-7 outline-none px-10 border border-[#ff8230] rounded-[20px] max-w-full w-[380px]" />
             <i
-              class="absolute top-30 px-3 text-[16px] max-xxs:text-[13px] left-[95px] text-[#ff8230] fa-solid fa-magnifying-glass"></i>
+              class="absolute top-30 mr-3 ml-1 text-[16px] max-xxs:text-[13px] left-[10px] text-[#ff8230] fa-solid fa-magnifying-glass"></i>
             <div>
               <button
                 class="absolute top-[11px]  max-xxs:text-[10px] max-xms:top-[16px] right-0 max-xxs:py-[6px] max-xxs:top-[18px] bg-[#ff8230] text-white max-xms:py-[5px] py-[11px] max-xms:px-[10px] px-4 rounded-[20px] text-[14px]">Axtar</button>
@@ -54,9 +57,9 @@
       </div>
     </div>
     <div class="bg-[#ff8230] px-10 max-xs:px-2">
-      <div class="max-w-[1200px] flex justify-between h-12 mx-auto">
+      <div class="max-w-[1200px] flex relative z-50 justify-between h-12 mx-auto">
         <div
-          class="bg-white max-w-full max-mds:hidden min-w-[250px] min-h-[640px] rounded-[7px] border-t-2 border-t-[#ff8230]">
+          class="bg-white max-w-full max-mds:hidden min-w-[250px] min-h-[700px] rounded-[7px] border-t-2 border-t-[#ff8230]">
           <div class="py-[19px] px-[7px] text-[15px] font-[600] text-[#ff8230]">
             <a href="">
               <i class="fa-solid text-[20px] px-2 fa-bars"></i>
@@ -86,7 +89,9 @@
           <div class="pt-[5px] lg:hidden">
             <li class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
               <a href="">
-                  <img class="max-w-full w-[16px]" src="  https://neptun.az/image/catalog/icon-menu/Meyv%C9%99-v%C9%99-t%C9%99r%C9%99v%C9%99z.svg" alt="Meyvə" />
+                <img class="max-w-full w-[16px]"
+                  src="  https://neptun.az/image/catalog/icon-menu/Meyv%C9%99-v%C9%99-t%C9%99r%C9%99v%C9%99z.svg"
+                  alt="Meyvə" />
               </a>
               <div class="flex items-center justify-between gap-2 px-4 w-full">
                 <span class="text-[12px] cursor-pointer">Meyvə, tərəvəz, quru meyvə</span>
@@ -95,7 +100,9 @@
 
             <li class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
               <a href="">
-                <img class="max-w-full w-[16px]" src="https://neptun.az/image/catalog/icon-menu/%C9%99t-v%C9%99-toyuq%20m%C9%99hsullar%C4%B1.svg" alt="Meyvə" />
+                <img class="max-w-full w-[16px]"
+                  src="https://neptun.az/image/catalog/icon-menu/%C9%99t-v%C9%99-toyuq%20m%C9%99hsullar%C4%B1.svg"
+                  alt="Meyvə" />
               </a>
               <div class="flex items-center justify-between gap-2 px-4 w-full">
                 <span class="text-[12px] cursor-pointer">Ət, toyuq, dəniz məhsulları</span>
@@ -104,7 +111,8 @@
 
             <li class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
               <a href="">
-                <img class="max-w-full w-[16px]" src="https://neptun.az/image/catalog/icon-menu/Qastronom.svg" alt="Meyvə" />
+                <img class="max-w-full w-[16px]" src="https://neptun.az/image/catalog/icon-menu/Qastronom.svg"
+                  alt="Meyvə" />
               </a>
               <div class="flex items-center justify-between gap-2 px-4 w-full">
                 <span class="text-[12px] cursor-pointer">Qastronom</span>
@@ -113,7 +121,8 @@
 
             <li class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
               <a href="">
-                <img class="max-w-full w-[16px]" src="https://neptun.az/image/catalog/icon-menu/%C9%99rzaq%20m%C9%99hsullar%C4%B1.svg" alt="Meyvə" />
+                <img class="max-w-full w-[16px]"
+                  src="https://neptun.az/image/catalog/icon-menu/%C9%99rzaq%20m%C9%99hsullar%C4%B1.svg" alt="Meyvə" />
               </a>
               <div class="flex items-center justify-between gap-2 px-4 w-full">
                 <span class="text-[12px] cursor-pointer">Ərzaq məhsulları</span>
@@ -122,7 +131,9 @@
 
             <li class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
               <a href="">
-                <img class="max-w-full w-[16px]" src="https://neptun.az/image/catalog/icon-menu/%C5%9Eirniyyat-%C3%A7ay-v%C9%99%20q%C9%99hv%C9%99.svg" alt="Meyvə" />
+                <img class="max-w-full w-[16px]"
+                  src="https://neptun.az/image/catalog/icon-menu/%C5%9Eirniyyat-%C3%A7ay-v%C9%99%20q%C9%99hv%C9%99.svg"
+                  alt="Meyvə" />
               </a>
               <div class="flex items-center justify-between gap-2 px-4 w-full">
                 <span class="text-[12px] cursor-pointer">Şirniyyat, çay, kofe, diabetik</span>
@@ -131,7 +142,8 @@
 
             <li class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
               <a href="">
-                <img class="max-w-full w-[16px]" src="https://neptun.az/image/catalog/icon-menu/%C4%B0%C3%A7kil%C9%99r.svg" alt="Meyvə" />
+                <img class="max-w-full w-[16px]"
+                  src="https://neptun.az/image/catalog/icon-menu/%C4%B0%C3%A7kil%C9%99r.svg" alt="Meyvə" />
               </a>
               <div class="flex items-center justify-between gap-2 px-4 w-full">
                 <span class="text-[12px] cursor-pointer">İçkilər</span>
@@ -140,7 +152,8 @@
 
             <li class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
               <a href="">
-                <img class="max-w-full w-[16px]" src="https://neptun.az/image/catalog/icon-menu/S%C3%BCd-m%C9%99hsullar%C4%B1.svg" alt="Meyvə" />
+                <img class="max-w-full w-[16px]"
+                  src="https://neptun.az/image/catalog/icon-menu/S%C3%BCd-m%C9%99hsullar%C4%B1.svg" alt="Meyvə" />
               </a>
               <div class="flex items-center justify-between gap-2 px-4 w-full">
                 <span class="text-[12px] cursor-pointer">Süd məhsulları</span>
@@ -149,7 +162,8 @@
 
             <li class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
               <a href="">
-                <img class="max-w-full w-[16px]" src="https://neptun.az/image/catalog/icon-menu/U%C5%9Faq-m%C9%99hsullar%C4%B1.svg" alt="Meyvə" />
+                <img class="max-w-full w-[16px]"
+                  src="https://neptun.az/image/catalog/icon-menu/U%C5%9Faq-m%C9%99hsullar%C4%B1.svg" alt="Meyvə" />
               </a>
               <div class="flex items-center justify-between gap-2 px-4 w-full">
                 <span class="text-[12px] cursor-pointer">Uşaq məhsulları</span>
@@ -158,7 +172,8 @@
 
             <li class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
               <a href="">
-                <img class="max-w-full w-[16px]" src="https://neptun.az/image/catalog/icon-menu/Yuyucu-vasit%C9%99l%C9%99r.svg" alt="Meyvə" />
+                <img class="max-w-full w-[16px]"
+                  src="https://neptun.az/image/catalog/icon-menu/Yuyucu-vasit%C9%99l%C9%99r.svg" alt="Meyvə" />
               </a>
               <div class="flex items-center justify-between gap-2 px-4 w-full">
                 <span class="text-[12px] cursor-pointer">Yuyucu,təmizləyici vasitələr</span>
@@ -166,7 +181,8 @@
             </li>
             <li class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
               <a href="">
-                <img class="max-w-full w-[16px]" src="https://neptun.az/image/catalog/icon-menu/Kosmetik-v%C9%99-gigiyenik.svg" alt="Meyvə" />
+                <img class="max-w-full w-[16px]"
+                  src="https://neptun.az/image/catalog/icon-menu/Kosmetik-v%C9%99-gigiyenik.svg" alt="Meyvə" />
               </a>
               <div class="flex items-center justify-between gap-2 px-4 w-full">
                 <span class="text-[12px] cursor-pointer">Kosmetik və gigiyenik</span>
@@ -174,7 +190,9 @@
             </li>
             <li class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
               <a href="">
-                <img class="max-w-full w-[16px]" src="https://neptun.az/image/catalog/icon-menu/M%C9%99i%C5%9F%C9%99t-m%C9%99tb%C9%99x-v%C9%99-tekstil.svg" alt="Meyvə" />
+                <img class="max-w-full w-[16px]"
+                  src="https://neptun.az/image/catalog/icon-menu/M%C9%99i%C5%9F%C9%99t-m%C9%99tb%C9%99x-v%C9%99-tekstil.svg"
+                  alt="Meyvə" />
               </a>
               <div class="flex items-center justify-between gap-2 px-4 w-full">
                 <span class="text-[12px] cursor-pointer">Məişət, mətbəx, tekstil</span>
@@ -182,7 +200,8 @@
             </li>
             <li class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
               <a href="">
-                <img class="max-w-full w-[16px]" src="https://neptun.az/image/catalog/icon-menu/Konselyariya.svg" alt="Meyvə" />
+                <img class="max-w-full w-[16px]" src="https://neptun.az/image/catalog/icon-menu/Konselyariya.svg"
+                  alt="Meyvə" />
               </a>
               <div class="flex items-center justify-between gap-2 px-4 w-full">
                 <span class="text-[12px] cursor-pointer">Konselyariya</span>
@@ -190,7 +209,8 @@
             </li>
             <li class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
               <a href="">
-                <img class="max-w-full w-[16px]" src="https://neptun.az/image/catalog/icon-menu/Heyvan-yeml%C9%99ri.svg" alt="Meyvə" />
+                <img class="max-w-full w-[16px]" src="https://neptun.az/image/catalog/icon-menu/Heyvan-yeml%C9%99ri.svg"
+                  alt="Meyvə" />
               </a>
               <div class="flex items-center justify-between gap-2 px-4 w-full">
                 <span class="text-[12px] cursor-pointer">Heyvan yemləri</span>
@@ -198,7 +218,8 @@
             </li>
             <li class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
               <a href="">
-                <img class="max-w-full w-[16px]" src="https://neptun.az/image/catalog/icon-menu/neptun-icon.svg" alt="Meyvə" />
+                <img class="max-w-full w-[16px]" src="https://neptun.az/image/catalog/icon-menu/neptun-icon.svg"
+                  alt="Meyvə" />
               </a>
               <div class="flex items-center justify-between gap-2 px-4 w-full">
                 <span class="text-[12px] cursor-pointer">Yalnız Neptunda</span>
@@ -206,7 +227,8 @@
             </li>
             <li class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
               <a href="">
-                <img class="max-w-full w-[16px]" src="https://neptun.az/image/catalog/icon-menu/neptun-icon.svg" alt="Meyvə" />
+                <img class="max-w-full w-[16px]" src="https://neptun.az/image/catalog/icon-menu/neptun-icon.svg"
+                  alt="Meyvə" />
               </a>
               <div class="flex items-center justify-between gap-2 px-4 w-full">
                 <span class="text-[12px] cursor-pointer">Yalnız Neptunda</span>
@@ -214,7 +236,8 @@
             </li>
             <li class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
               <a href="">
-                <img class="max-w-full w-[16px]" src="https://neptun.az/image/catalog/icon-menu/elektronika-v%C9%99-mebel.svg" alt="Meyvə" />
+                <img class="max-w-full w-[16px]"
+                  src="https://neptun.az/image/catalog/icon-menu/elektronika-v%C9%99-mebel.svg" alt="Meyvə" />
               </a>
               <div class="flex items-center justify-between gap-2 px-4 w-full">
                 <span class="text-[12px] cursor-pointer">Elektronika & Mebel</span>
@@ -373,7 +396,7 @@
 
         </div>
 
-        
+
 
         <button onclick="openSidebarTop()" class="p-1 md:hidden ml-2">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
@@ -386,9 +409,76 @@
 
   </header>
 
+  <main class="max-w-[1280px] mx-auto">
+    <div class="w-[71%] mt-3 ml-auto  max-mds:mx-auto max-mds:w-4/5">
+      <div class="swiper mySwiper max-w-[1100px] mx-auto">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/dadli.webp" alt="dadli" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/cumegunu.webp" alt="cumegunu" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/neptunda.webp" alt="neptunda" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/heftesonnu.webp" alt="heftesonnu" />
+          </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <div class="swiper-pagination flex items-center justify-start"></div>
+      </div>
+      </div>
+
+      <section  class="w-[71%] mt-3 ml-auto max-mds:mx-auto max-mds:w-4/5">
+        <div class="swiper2 mySwiper2 max-w-[1100px] mx-auto">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide flex flex-col">
+              <a href="#"><img src="img/yeniklassik.webp" alt="images" /></a>
+              <div class="bg-white text-gray-600 flex items-center justify-between py-[13px] px-[9px] hover:text-[#ff8230] w-full">
+                <h4 class="font-bold text-[13px] max-md:text-[10px]">50 Azn 50 Bonus</h4>
+                <i class="fa-solid text-[16px] max-md:text-[13px] fa-arrow-right"></i>
+              </div>
+            </div>
+            
+
+            <div class="swiper-slide flex flex-col">
+              <a href="#"><img src="img/neptunendirim.webp" alt="images" /></a>
+              <div class="bg-white text-gray-600 flex items-center justify-between py-[13px] px-[9px] hover:text-[#ff8230] w-full">
+                <h4 class="font-bold text-[13px] max-md:text-[10px]">Neptunda Dadlı Endirimlər!</h4>
+                <i class="fa-solid text-[16px] max-md:text-[13px] fa-arrow-right"></i>
+              </div>
+            </div>
+            
+            <div class="swiper-slide flex flex-col">
+              <a href="#"><img src="img/heftesonu-kampaniya.webp" alt="images" /></a>
+              <div class="bg-white text-gray-600 flex items-center justify-between py-[13px] px-[9px] hover:text-[#ff8230] w-full">
+                <h4 class="font-bold text-[13px] max-md:text-[10px]">Həftəsonu endirimləri Neptunda!</h4>
+                <i class="fa-solid text-[16px] max-md:text-[13px] fa-arrow-right"></i>
+              </div>
+            </div>
+            
+           
+          
+          </div>
+        </div>
+      </section>
+      
+
+
+
+  </main>
+
   <script src="js/index.js"></script>
   <script src="services/api.js"></script>
   <script src="js/header.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
 </body>
 
 </html>
