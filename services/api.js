@@ -19,3 +19,13 @@ async function getProductbyById(id){
     const res = await fetch(`${BASE_URL}/categories/${id}`)
     return res.json()
 }
+
+async function getProductsByDisc() {
+    const res = await fetch(`${BASE_URL}/products/discounted`)
+    return res.json()
+}
+
+async function getProdByPopular() {
+    const res = await fetch(`${BASE_URL}/products/populyar`)
+    return res.json()
+}

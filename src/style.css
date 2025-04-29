@@ -1,0 +1,134 @@
+.swiper3 {
+  position: relative;
+  max-width: 70%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination3 .swiper-button-next,
+.swiper-pagination3 .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: #fff; 
+  border-radius: 50%;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.swiper-pagination3 {
+  position: absolute;
+  bottom: 10px;
+  width: 20px;
+  height: 20px;
+  left: 100%;
+  z-index: 50;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-pagination3 .swiper-pagination-bullet-active{
+  border: 1px solid #fff;
+}
+
+.swiper4 {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.swiper-pagination4 .swiper-button-next,
+.swiper-pagination4 .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: #fff; 
+  border-radius: 50%;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper5 {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.swiper-pagination5 .swiper-button-next,
+.swiper-pagination5 .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: #fff; 
+  border-radius: 50%;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper6 {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.swiper-pagination6 .swiper-button-next,
+.swiper-pagination6 .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: #fff; 
+  border-radius: 50%;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
