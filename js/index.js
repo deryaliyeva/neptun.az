@@ -26,8 +26,8 @@ function openSidebarBottom() {
 (function showPopular() {
   getProdByPopular().then(data => {
       if (data.totalProducts == 0) {
-          getAllProducts(15, 14).then( mel => {
-              slideShow("bestSlider", mel)
+          getAllProducts(15, 2).then( mel => {
+              slideShow("bestSlider", mel.products)
           } )
       }else{
           slideShow("bestSlider", data)

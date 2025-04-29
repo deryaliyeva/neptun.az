@@ -10,12 +10,12 @@ async function getCagetoryById(id){
     return res.json()
 }
 
-async function getAllProducts(){
-    const res = await fetch(`${BASE_URL}/categories`)
+async function getAllProducts(limit = 20, page = 2){
+    const res = await fetch(`${BASE_URL}/products?limit=${limit}&page${page}`)
     return res.json()
 }
 
-async function getProductbyById(id){
+async function getProductbyById(){
     const res = await fetch(`${BASE_URL}/categories/${id}`)
     return res.json()
 }
