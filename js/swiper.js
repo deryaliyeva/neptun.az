@@ -45,21 +45,21 @@ var swiper3 = new Swiper(".mySwiper3", {
 const swiper4 = new Swiper(".mySwiper4", {
   slidesPerView: 1,
   spaceBetween: 10,
-  pagination: {
-    el: ".swiper-pagination4",
-    clickable: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   breakpoints: {
-    640: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
     768: {
-      slidesPerView: 4,
+      slidesPerView: 1,
       spaceBetween: 40,
     },
-    1024: {
-      slidesPerView: 5,
+    1199: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+    992: {
+      slidesPerView: 2,
       spaceBetween: 50,
     },
   },
@@ -68,9 +68,9 @@ const swiper4 = new Swiper(".mySwiper4", {
 const swiper5 = new Swiper(".mySwiper5", {
   slidesPerView: 1,
   spaceBetween: 10,
-  pagination: {
-    el: ".swiper-pagination5",
-    clickable: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   breakpoints: {
     640: {
@@ -91,9 +91,9 @@ const swiper5 = new Swiper(".mySwiper5", {
 const swiper6 = new Swiper(".mySwiper6", {
   slidesPerView: 1,
   spaceBetween: 10,
-  pagination: {
-    el: ".swiper-pagination5",
-    clickable: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   breakpoints: {
     640: {

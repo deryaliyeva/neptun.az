@@ -29,3 +29,12 @@ async function getProdByPopular() {
     const res = await fetch(`${BASE_URL}/products/populyar`)
     return res.json()
 }
+async function getProdByCatId(id) {
+    const res = await fetch(`${BASE_URL}/products/category/${id}`)
+    return res.json()
+}
+
+async function getProdBySubCatId(id) {
+    const res = await fetch(`${BASE_URL}/products/category/${id}`)
+    return res.json()
+}

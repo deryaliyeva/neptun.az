@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neptun Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="../images.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../src/output.css" />
+    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="../src/swiper.css">
+
+</head>
+
+<body class="bg-[#F2F2F2]">
+    <header class="bg-white">
+        <div class="px-[15px] py-[25px] text-gray-800">
+            <div class="max-w-[1230px] max-lgs:max-w-[860px] flex justify-between h-16 mx-auto">
+                <div class="flex gap-10 max-xms:gap-5 max-xs:gap-[5px] max-xxs:gap-0">
+                    <a rel="noopener noreferrer" href="/index.htm" aria-label="Back to homepage" class="flex items-center p-2">
+                        <img class="max-w-full w-[270px] max-sm:max-w-[147px] max-xxs:max-w-[100px] max-xms:max-w-[122px] max-sm:min-h-[40px] min-h-[58px]"
+                            src="../img/neptun-logo.png" alt="neptun-logo" />
+                    </a>
+                    <div class="flex items-center justify-start relative">
+                        <input type="text" placeholder="Məhsulu axtarın"
+                            class="py-[10px] text-[13px] max-xxs:text-[10px] max-sm:w-[280px] max-xxs:w-[150px] max-xs:w-[244px] max-xms:py-[5px] max-xxs:px-7 outline-none px-10 border border-[#ff8230] rounded-[20px] max-w-full w-[380px]" />
+                        <i
+                            class="absolute top-30 mr-3 ml-1 text-[16px] max-xxs:text-[13px] left-[10px] text-[#ff8230] fa-solid fa-magnifying-glass"></i>
+                        <div>
+                            <button
+                                class="absolute top-[11px]  max-xxs:text-[10px] max-xms:top-[16px] right-0 max-xxs:py-[6px] max-xxs:top-[18px] bg-[#ff8230] text-white max-xms:py-[5px] py-[11px] max-xms:px-[10px] px-4 rounded-[20px] text-[14px]">Axtar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="items-center flex justify-center ml-5 gap-5 max-mds:hidden">
+                    <div>
+                        <a class="flex items-center justify-center" href="#">
+                            <img class="max-w-[20px] min-h-[15px]" src="../img/flags.png" alt="flags" />
+                            <span class="text-[11px] font-[600] px-1">AZE</span>
+                        </a>
+                    </div>
+                    <div>
+                        <img class="max-w-[97px] min-h-[43px]" src="../img/download (2)" alt="img" />
+                    </div>
+                </div>
+
+                <button onclick="openSidebarTop()" class="p-4 mds:hidden max-md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-[43px] h-[37px] p-1 bg-[#ff8230] rounded-lg shadow-xl text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="bg-[#ff8230] px-10 max-xs:px-2">
+            <div class="max-w-[1200px] flex relative z-50 justify-between h-12 mx-auto">
+                <div class="bg-white max-w-full max-mds:hidden hover:min-w-[230px] min-w-0  hover:min-h-[700px] min-h-0 rounded-[7px] border-t-2 border-b-2 border-b-[#ff8230] border-t-[#ff8230]">
+                    <div class="relative group">
+                        <div class="py-[10px] px-[7px] text-[15px] font-[600] text-[#ff8230] cursor-pointer flex items-center min-w-[190px]">
+                            <a href="#">
+                                <i class="fa-solid text-[20px] px-2 fa-bars"></i>
+                            </a>
+                            <span class="min-w-[210px]">Kateqoriyalar</span>
+                        </div>
+                    
+                        <!-- Hover ilə görünəcək menyu -->
+                        <ul id="menu" class="absolute top-full left-0 z-50 hidden group-hover:block bg-white rounded-b-md overflow-hidden transition-all min-w-[250px]"></ul>
+                    </div>
+
+                    <div class="py-[10px] hidden px-[15px] bg-[#ff8230] rounded-b-[7px] flex items-center justify-start">
+                        <a href="">
+                            <img class="max-w-full w-[16px]" src="../img/Aksiyalar.svg" alt="Aksiyalar" />
+                        </a>
+                        <span class="text-[12px] text-white px-5 cursor-pointer">Kampaniyalar</span>
+                    </div>
+
+                </div>
+
+                <!--alt sidebar-->
+
+                <div id="openCloseBottom"
+                    class="h-screen p-4 fixed z-50 top-[166px] left-[-100%] border max-w-[80%] bg-white transition-all duration-700 ease-in-out">
+                    <div onclick="openSidebarBottom()" class="px-4 py-4 flex items-center justify-end">
+                        <i class="text-[13px] fa-solid fa-xmark cursor-pointer"></i>
+                    </div>
+
+                    <div class="pt-[5px] lg:hidden">
+                        <li
+                            class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
+                            <a href="">
+                                <img class="max-w-full w-[16px]"
+                                    src="  https://neptun.az/image/catalog/icon-menu/Meyv%C9%99-v%C9%99-t%C9%99r%C9%99v%C9%99z.svg"
+                                    alt="Meyvə" />
+                            </a>
+                            <div class="flex items-center justify-between gap-2 px-4 w-full">
+                                <span class="text-[12px] cursor-pointer">Meyvə, tərəvəz, quru meyvə</span>
+                            </div>
+                        </li>
+
+                        <li
+                            class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
+                            <a href="">
+                                <img class="max-w-full w-[16px]"
+                                    src="https://neptun.az/image/catalog/icon-menu/%C9%99t-v%C9%99-toyuq%20m%C9%99hsullar%C4%B1.svg"
+                                    alt="Meyvə" />
+                            </a>
+                            <div class="flex items-center justify-between gap-2 px-4 w-full">
+                                <span class="text-[12px] cursor-pointer">Ət, toyuq, dəniz məhsulları</span>
+                            </div>
+                        </li>
+
+                        <li
+                            class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
+                            <a href="">
+                                <img class="max-w-full w-[16px]"
+                                    src="https://neptun.az/image/catalog/icon-menu/Qastronom.svg" alt="Meyvə" />
+                            </a>
+                            <div class="flex items-center justify-between gap-2 px-4 w-full">
+                                <span class="text-[12px] cursor-pointer">Qastronom</span>
+                            </div>
+                        </li>
+
+                        <li
+                            class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
+                            <a href="">
+                                <img class="max-w-full w-[16px]"
+                                    src="https://neptun.az/image/catalog/icon-menu/%C9%99rzaq%20m%C9%99hsullar%C4%B1.svg"
+                                    alt="Meyvə" />
+                            </a>
+                            <div class="flex items-center justify-between gap-2 px-4 w-full">
+                                <span class="text-[12px] cursor-pointer">Ərzaq məhsulları</span>
+                            </div>
+                        </li>
+
+                        <li
+                            class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
+                            <a href="">
+                                <img class="max-w-full w-[16px]"
+                                    src="https://neptun.az/image/catalog/icon-menu/%C5%9Eirniyyat-%C3%A7ay-v%C9%99%20q%C9%99hv%C9%99.svg"
+                                    alt="Meyvə" />
+                            </a>
+                            <div class="flex items-center justify-between gap-2 px-4 w-full">
+                                <span class="text-[12px] cursor-pointer">Şirniyyat, çay, kofe, diabetik</span>
+                            </div>
+                        </li>
+
+                        <li
+                            class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
+                            <a href="">
+                                <img class="max-w-full w-[16px]"
+                                    src="https://neptun.az/image/catalog/icon-menu/%C4%B0%C3%A7kil%C9%99r.svg"
+                                    alt="Meyvə" />
+                            </a>
+                            <div class="flex items-center justify-between gap-2 px-4 w-full">
+                                <span class="text-[12px] cursor-pointer">İçkilər</span>
+                            </div>
+                        </li>
+
+                        <li
+                            class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
+                            <a href="">
+                                <img class="max-w-full w-[16px]"
+                                    src="https://neptun.az/image/catalog/icon-menu/S%C3%BCd-m%C9%99hsullar%C4%B1.svg"
+                                    alt="Meyvə" />
+                            </a>
+                            <div class="flex items-center justify-between gap-2 px-4 w-full">
+                                <span class="text-[12px] cursor-pointer">Süd məhsulları</span>
+                            </div>
+                        </li>
+
+                        <li
+                            class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
+                            <a href="">
+                                <img class="max-w-full w-[16px]"
+                                    src="https://neptun.az/image/catalog/icon-menu/U%C5%9Faq-m%C9%99hsullar%C4%B1.svg"
+                                    alt="Meyvə" />
+                            </a>
+                            <div class="flex items-center justify-between gap-2 px-4 w-full">
+                                <span class="text-[12px] cursor-pointer">Uşaq məhsulları</span>
+                            </div>
+                        </li>
+
+                        <li
+                            class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
+                            <a href="">
+                                <img class="max-w-full w-[16px]"
+                                    src="https://neptun.az/image/catalog/icon-menu/Yuyucu-vasit%C9%99l%C9%99r.svg"
+                                    alt="Meyvə" />
+                            </a>
+                            <div class="flex items-center justify-between gap-2 px-4 w-full">
+                                <span class="text-[12px] cursor-pointer">Yuyucu,təmizləyici vasitələr</span>
+                            </div>
+                        </li>
+                        <li
+                            class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
+                            <a href="">
+                                <img class="max-w-full w-[16px]"
+                                    src="https://neptun.az/image/catalog/icon-menu/Kosmetik-v%C9%99-gigiyenik.svg"
+                                    alt="Meyvə" />
+                            </a>
+                            <div class="flex items-center justify-between gap-2 px-4 w-full">
+                                <span class="text-[12px] cursor-pointer">Kosmetik və gigiyenik</span>
+                            </div>
+                        </li>
+                        <li
+                            class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
+                            <a href="">
+                                <img class="max-w-full w-[16px]"
+                                    src="https://neptun.az/image/catalog/icon-menu/M%C9%99i%C5%9F%C9%99t-m%C9%99tb%C9%99x-v%C9%99-tekstil.svg"
+                                    alt="Meyvə" />
+                            </a>
+                            <div class="flex items-center justify-between gap-2 px-4 w-full">
+                                <span class="text-[12px] cursor-pointer">Məişət, mətbəx, tekstil</span>
+                            </div>
+                        </li>
+                        <li
+                            class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
+                            <a href="">
+                                <img class="max-w-full w-[16px]"
+                                    src="https://neptun.az/image/catalog/icon-menu/Konselyariya.svg" alt="Meyvə" />
+                            </a>
+                            <div class="flex items-center justify-between gap-2 px-4 w-full">
+                                <span class="text-[12px] cursor-pointer">Konselyariya</span>
+                            </div>
+                        </li>
+                        <li
+                            class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
+                            <a href="">
+                                <img class="max-w-full w-[16px]"
+                                    src="https://neptun.az/image/catalog/icon-menu/Heyvan-yeml%C9%99ri.svg"
+                                    alt="Meyvə" />
+                            </a>
+                            <div class="flex items-center justify-between gap-2 px-4 w-full">
+                                <span class="text-[12px] cursor-pointer">Heyvan yemləri</span>
+                            </div>
+                        </li>
+                        <li
+                            class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
+                            <a href="">
+                                <img class="max-w-full w-[16px]"
+                                    src="https://neptun.az/image/catalog/icon-menu/neptun-icon.svg" alt="Meyvə" />
+                            </a>
+                            <div class="flex items-center justify-between gap-2 px-4 w-full">
+                                <span class="text-[12px] cursor-pointer">Yalnız Neptunda</span>
+                            </div>
+                        </li>
+                        <li
+                            class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
+                            <a href="">
+                                <img class="max-w-full w-[16px]"
+                                    src="https://neptun.az/image/catalog/icon-menu/neptun-icon.svg" alt="Meyvə" />
+                            </a>
+                            <div class="flex items-center justify-between gap-2 px-4 w-full">
+                                <span class="text-[12px] cursor-pointer">Yalnız Neptunda</span>
+                            </div>
+                        </li>
+                        <li
+                            class="py-[5px] px-[5px] flex items-center justify-start hover:bg-orange-200 hover:transition-all">
+                            <a href="">
+                                <img class="max-w-full w-[16px]"
+                                    src="https://neptun.az/image/catalog/icon-menu/elektronika-v%C9%99-mebel.svg"
+                                    alt="Meyvə" />
+                            </a>
+                            <div class="flex items-center justify-between gap-2 px-4 w-full">
+                                <span class="text-[12px] cursor-pointer">Elektronika & Mebel</span>
+                            </div>
+                        </li>
+                    </div>
+
+                </div>
+
+                <button onclick="openSidebarBottom()" class="p-2 hidden max-mds:block">
+                    <i class="text-[20px] max-xs:text-[17px] text-white fa-solid fa-bars-staggered"></i>
+                </button>
+
+                <ul class="items-stretch flex text-white max-hd:hidden space-x-3">
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#"
+                            class="flex items-center px-2 font-bold text-[12px] -mb-1">Ana
+                            səhifə</a>
+                    </li>
+                    <li class="group flex relative items-center justify-center">
+                        <a rel="noopener noreferrer" href="#"
+                            class="flex items-center font-bold px-2 text-[12px] -mb-1 z-10">Haqqımızda
+                            <i class="fa-solid text-[10px] px-2 fa-caret-down"></i>
+                        </a>
+
+                        <!-- Hoverde olacaq olan div -->
+                        <div
+                            class="absolute top-full w-0 h-0 overflow-hidden bg-white rounded-b-[18px] shadow-2xl text-[12px] text-black opacity-0 translate-x-[-10px] transition-all duration-300 ease-in-out group-hover:w-[160px] group-hover:h-[90px] group-hover:p-2 group-hover:opacity-100 group-hover:translate-x-0">
+                            <p class="px-2 py-1">Siyasətimiz</p>
+                            <p class="px-2 py-1">Yeniliklər</p>
+                        </div>
+                    </li>
+
+                    <li class="group flex relative items-center justify-center">
+                        <a rel="noopener noreferrer" href="#"
+                            class="flex items-center font-bold px-2 text-[12px] -mb-1 z-10">Aksiyalar
+                            <i class="fa-solid text-[10px] px-2 fa-caret-down"></i>
+                        </a>
+
+                        <!-- Hoverde olacaq olan div -->
+                        <div
+                            class="absolute top-full w-0 h-0 overflow-hidden bg-white rounded-b-[18px] shadow-2xl text-[12px] text-black opacity-0 translate-x-[-10px] transition-all duration-300 ease-in-out group-hover:w-[160px] group-hover:h-[90px] group-hover:p-2 group-hover:opacity-100 group-hover:translate-x-0">
+                            <p class="px-2 py-1">Kampaniyalar</p>
+                            <p class="px-2 py-1">Neptun bonus kart</p>
+                            <p class="px-2 py-1">Elektron kataloq</p>
+                        </div>
+                    </li>
+
+                    <li class="group flex relative items-center justify-center">
+                        <a rel="noopener noreferrer" href="#"
+                            class="flex items-center px-2 font-bold text-[12px] -mb-1 z-10">Supermarketlər
+                            <i class="fa-solid text-[10px] px-2 fa-caret-down"></i>
+                        </a>
+
+                        <!-- Hoverde olacaq olan div -->
+                        <div
+                            class="absolute top-full w-0 h-0 overflow-hidden bg-white rounded-b-[18px] shadow-2xl text-[12px] text-black opacity-0 translate-x-[-10px] transition-all duration-300 ease-in-out group-hover:w-[160px] group-hover:h-[170px] group-hover:p-2 group-hover:opacity-100 group-hover:translate-x-0">
+                            <p class="px-2 py-1">Mağazalarımız</p>
+                            <p class="px-2 py-1">Mağazalarımız</p>
+                            <p class="px-2 py-1">Mağazalarımız</p>
+                            <p class="px-2 py-1">Mağazalarımız</p>
+                            <p class="px-2 py-1">Mağazalarımız</p>
+                            <p class="px-2 py-1">Mağazalarımız</p>
+                        </div>
+                    </li>
+
+                    <li class="group flex relative items-center justify-center">
+                        <a rel="noopener noreferrer" href="#"
+                            class="flex items-center px-2 text-[12px] font-bold -mb-1 z-10">Karyera
+                            <i class="fa-solid text-[10px] px-2 fa-caret-down"></i>
+                        </a>
+
+                        <!-- Hoverde olacaq olan div -->
+                        <div
+                            class="absolute top-full w-0 h-0 overflow-hidden bg-white rounded-b-[18px] shadow-2xl text-[12px] text-black opacity-0 translate-x-[-10px] transition-all duration-300 ease-in-out group-hover:w-[160px] group-hover:h-[100px] group-hover:p-2 group-hover:opacity-100 group-hover:translate-x-0">
+                            <p class="px-2 py-1">Mağazalarımız</p>
+                            <p class="px-2 py-1">Mağazalarımız</p>
+                            <p class="px-2 py-1">Mağazalarımız</p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#"
+                            class="flex items-center px-2 text-[12px] font-bold -mb-1">Əlaqə</a>
+                    </li>
+                </ul>
+
+                <!--ust sidebar-->
+                <div id="openCloseTop"
+                    class="h-screen  max-w-full p-4 fixed z-50 top-0 left-[-100%] border w-[70%] bg-white transition-all duration-700 ease-in-out">
+                    <div class="px-4 py-4 flex items-center justify-end">
+                        <i onclick="openSidebarTop()" class="text-[15px] fa-solid fa-xmark cursor-pointer"></i>
+                    </div>
+                    <div class="pt-[40px] lg:hidden">
+                        <div rel="noopener noreferrer" href="#"
+                            class="font-[400] hover:text-[#ff8230] text-[13px] mb-2 py-2">Ana
+                            səhifə
+                            <hr>
+                        </div>
+
+                        <div rel="noopener noreferrer" href="#"
+                            class="font-[400] hover:text-[#ff8230] text-[13px] mb-2 py-2">
+                            Haqqımızda
+                            <hr>
+                        </div>
+
+                        <div class="font-[400] hover:text-[#ff8230] text-[13px] mb-2 py-2">Aksiyalar
+                            <hr>
+                        </div>
+
+                        <div rel="noopener noreferrer" href="#"
+                            class="font-[400] hover:text-[#ff8230] text-[13px] mb-2 py-2">
+                            Supermarketlər
+                            <hr>
+                        </div>
+
+                        <div rel="noopener noreferrer" href="#"
+                            class="font-[400] hover:text-[#ff8230] text-[13px] mb-2 py-2">
+                            Karyera
+                            <hr>
+                        </div>
+
+                        <div rel="noopener noreferrer" href="#"
+                            class="font-[400] hover:text-[#ff8230] text-[13px] mb-2 py-2">Əlaqə
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center text-white">
+
+                    <div class="group flex relative items-center justify-center">
+                        <i class="fa-solid text-[10px] fa-lock"></i>
+                        <a rel="noopener noreferrer" href="#"
+                            class="flex items-center px-2 text-[12px] -mb-1 z-10">Giriş
+                        </a>
+                    </div>
+
+                    <span class="px-2 max-xs:px-[5px]">|</span>
+
+                    <div class="text-[11px]">
+                        <div class="group flex relative items-center justify-center">
+                            <a rel="noopener noreferrer" href="#"
+                                class="flex items-center text-[12px] max-md:hidden -mb-1 z-10">Hesabım
+                            </a>
+                            <i class="fa-solid text-[10px] px-2 fa-caret-down"></i>
+                            <!-- Hoverde olacaq olan div -->
+                            <div
+                                class="absolute top-10 w-0 h-0 overflow-hidden bg-white rounded-b-[18px] shadow-2xl text-[12px] text-black opacity-0 translate-x-[-10px] transition-all duration-300 ease-in-out group-hover:w-[160px] group-hover:h-[100px] group-hover:p-2 group-hover:opacity-100 group-hover:translate-x-0">
+                                <p class="px-2 py-1">Mağazalarımız</p>
+                                <p class="px-2 py-1">Mağazalarımız</p>
+                                <p class="px-2 py-1">Mağazalarımız</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-[12px] ml-4 relative items-center justify-center gap-3 flex">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                        <div>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span
+                                class="bg-green-400 absolute top-0 text-black py-[1px] px-[5px] rounded-full text-[6px]">0</span>
+                        </div>
+                    </div>
+
+                </div>
+                <button onclick="openSidebarTop()" class="p-1 md:hidden ml-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-[43px] h-[37px] p-1 bg-white rounded-lg shadow-xl text-[#ff8230]">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="px-5">
+        <div class="text-[#6c6c6c] text-[13px] font-bold max-w-[1200px] mx-auto py-[36px]">
+            <a href="">
+                <span>
+                    Ana Səhifə
+                    <i class="fa-solid text-[10px] px-1 fa-chevron-right"></i>
+                </span>
+            </a>
+            <a href="">
+                <span>
+                    Meyvə, tərəvəz, quru meyvə 
+                    <i class="fa-solid text-[10px] px-1 fa-chevron-right"></i>
+                </span>
+            </a>
+            <a href="">
+                <span>Meyvə</span>
+            </a>
+        </div>
+        
+        <section class="max-w-[1200px] flex flex-row max-lg:flex-col gap-5 mx-auto">
+            <div class="max-w-full max-lg:hidden w-[30%] h-[30%] px-4 py-2 bg-white rounded-xl">
+                <h3 class="text-[#222] mb-1 font-bold text-[11px]">Filtr</h3>
+                <ul class="flex items-center pb-[30px] justify-between border-b-2">
+                    <li><a class="text-[11px] pt-[11px] text-[#444] font-bold" href="">Alt Kateqoriya</a></li>
+                    <i class="fa-solid text-[11px] font-bold fa-angle-down"></i>
+                </ul>
+
+                <ul class="flex items-center pb-[15px] justify-between border-b-2">
+                    <li><a class="text-[11px] pt-[11px] text-[#444] font-bold" href="">Markası</a></li>
+                    <i class="fa-solid text-[11px] font-bold fa-angle-down"></i>
+                </ul>
+
+                <ul class="flex items-center pb-[15px] justify-between border-b-2">
+                    <li><a class="text-[11px] pt-[11px] text-[#444] font-bold" href="">Qiymət</a></li>
+                    <i class="fa-solid text-[11px] font-bold fa-angle-down"></i>
+                </ul>
+
+                <div class="p-5 mx-auto flex items-center justify-center">
+                    <button class="text-[11px] font-bold text-[#fff] py-1 px-[10px] rounded-[15px] bg-[#ff8300] ">Hamısını Sıfırla</button>
+                </div>
+            </div>
+            <button class="p-1 lg:hidden ml-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    class="w-[43px] h-[37px] p-1 text-white shadow-xl bg-[#ff8230]">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <div class="max-w-full mx-auto w-[70%]">
+              <div class="mdx:flex mdx:items-center justify-between max-mdx:flex-col max-mdx:justify-start">
+                <div class="max-mdx:hidden">
+                    <i class="fa-solid text-[25px] text-[#ff8300] px-1 fa-border-all"></i>
+                    <i class="fa-solid text-[25px] text-[#555] px-1 fa-bars"></i>
+                </div>
+                <div class="flex items-center mb-4 px-3 justify-center gap-2 max-mdx:gap-0">
+                    <label class="ml-10" for="">Sırala:</label>
+                    <select class="max-w-full min-w-full py-[9px] px-[15px] rounded-2xl" name="" id="">
+                        <option class="font-bold" value="">Əsas</option>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </select>
+                </div>
+                <div class="flex items-center mb-4 px-3 justify-center gap-2 max-mdx:gap-0">
+                    <label for="">Göstər:</label>
+                    <select class="max-w-full w-full py-[9px] px-[15px] rounded-2xl" name="" id="">
+                        <option class="font-bold" value="">12</option>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </select>
+                </div>
+
+                <div>
+                    <button class="rounded-[20px] mb-4 mx-3 max-mdx:min-w-full text-[11px] text-white p-2 bg-[#ff8300]">
+                        <i class="fa-solid px-1 fa-arrows-rotate"></i>
+                        Müqayisə et
+                    </button>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-4 max-mdx:grid-cols-2 max-sm:grid-cols-1 max-lg:grid-cols-3 gap-4 mb-3">
+                <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
+                    <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2 text-center">
+                            <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">MVT.ALMA FUDJI KG</h2>
+                            <span class="text-[#181818] font-bold text-[20px]">4.49₼</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
+                            <span class="px-3 font-bold">1</span>
+                            <span class="text-[#ff8300] font-extrabold text-[30px]">+</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button class="bg-[#ff8300] hover:bg-orange-800 px-2 py-1 text-white rounded-2xl transition-all">Səbətə at</button>
+                            <i class="fa-solid text-[#ff8300] rounded-md  p-1 fa-heart hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                            <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                        </div>
+                    </div>
+                </article>
+                <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
+                    <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2 text-center">
+                            <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">MVT.ALMA FUDJI KG</h2>
+                            <span class="text-[#181818] font-bold text-[20px]">4.49₼</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
+                            <span class="px-3 font-bold">1</span>
+                            <span class="text-[#ff8300] font-extrabold text-[30px]">+</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button class="bg-[#ff8300] hover:bg-orange-800 px-2 py-1 text-white rounded-2xl transition-all">Səbətə at</button>
+                            <i class="fa-solid text-[#ff8300] rounded-md  p-1 fa-heart hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                            <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                        </div>
+                    </div>
+                </article>
+                <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
+                    <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2 text-center">
+                            <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">MVT.ALMA FUDJI KG</h2>
+                            <span class="text-[#181818] font-bold text-[20px]">4.49₼</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
+                            <span class="px-3 font-bold">1</span>
+                            <span class="text-[#ff8300] font-extrabold text-[30px]">+</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button class="bg-[#ff8300] hover:bg-orange-800 px-2 py-1 text-white rounded-2xl transition-all">Səbətə at</button>
+                            <i class="fa-solid text-[#ff8300] rounded-md  p-1 fa-heart hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                            <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                        </div>
+                    </div>
+                </article>
+                <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
+                    <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2 text-center">
+                            <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">MVT.ALMA FUDJI KG</h2>
+                            <span class="text-[#181818] font-bold text-[20px]">4.49₼</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
+                            <span class="px-3 font-bold">1</span>
+                            <span class="text-[#ff8300] font-extrabold text-[30px]">+</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button class="bg-[#ff8300] hover:bg-orange-800 px-2 py-1 text-white rounded-2xl transition-all">Səbətə at</button>
+                            <i class="fa-solid text-[#ff8300] rounded-md  p-1 fa-heart hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                            <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                        </div>
+                    </div>
+                </article>
+                <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
+                    <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2 text-center">
+                            <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">MVT.ALMA FUDJI KG</h2>
+                            <span class="text-[#181818] font-bold text-[20px]">4.49₼</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
+                            <span class="px-3 font-bold">1</span>
+                            <span class="text-[#ff8300] font-extrabold text-[30px]">+</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button class="bg-[#ff8300] hover:bg-orange-800 px-2 py-1 text-white rounded-2xl transition-all">Səbətə at</button>
+                            <i class="fa-solid text-[#ff8300] rounded-md  p-1 fa-heart hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                            <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                        </div>
+                    </div>
+                </article>
+                <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
+                    <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2 text-center">
+                            <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">MVT.ALMA FUDJI KG</h2>
+                            <span class="text-[#181818] font-bold text-[20px]">4.49₼</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
+                            <span class="px-3 font-bold">1</span>
+                            <span class="text-[#ff8300] font-extrabold text-[30px]">+</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button class="bg-[#ff8300] hover:bg-orange-800 px-2 py-1 text-white rounded-2xl transition-all">Səbətə at</button>
+                            <i class="fa-solid text-[#ff8300] rounded-md  p-1 fa-heart hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                            <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                        </div>
+                    </div>
+                </article>
+                <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
+                    <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2 text-center">
+                            <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">MVT.ALMA FUDJI KG</h2>
+                            <span class="text-[#181818] font-bold text-[20px]">4.49₼</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
+                            <span class="px-3 font-bold">1</span>
+                            <span class="text-[#ff8300] font-extrabold text-[30px]">+</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button class="bg-[#ff8300] hover:bg-orange-800 px-2 py-1 text-white rounded-2xl transition-all">Səbətə at</button>
+                            <i class="fa-solid text-[#ff8300] rounded-md  p-1 fa-heart hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                            <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                        </div>
+                    </div>
+                </article>
+                <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
+                    <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2 text-center">
+                            <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">MVT.ALMA FUDJI KG</h2>
+                            <span class="text-[#181818] font-bold text-[20px]">4.49₼</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
+                            <span class="px-3 font-bold">1</span>
+                            <span class="text-[#ff8300] font-extrabold text-[30px]">+</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button class="bg-[#ff8300] hover:bg-orange-800 px-2 py-1 text-white rounded-2xl transition-all">Səbətə at</button>
+                            <i class="fa-solid text-[#ff8300] rounded-md  p-1 fa-heart hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                            <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                        </div>
+                    </div>
+                </article>
+                <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
+                    <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2 text-center">
+                            <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">MVT.ALMA FUDJI KG</h2>
+                            <span class="text-[#181818] font-bold text-[20px]">4.49₼</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
+                            <span class="px-3 font-bold">1</span>
+                            <span class="text-[#ff8300] font-extrabold text-[30px]">+</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button class="bg-[#ff8300] hover:bg-orange-800 px-2 py-1 text-white rounded-2xl transition-all">Səbətə at</button>
+                            <i class="fa-solid text-[#ff8300] rounded-md  p-1 fa-heart hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                            <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                        </div>
+                    </div>
+                </article>
+                <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
+                    <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2 text-center">
+                            <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">MVT.ALMA FUDJI KG</h2>
+                            <span class="text-[#181818] font-bold text-[20px]">4.49₼</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
+                            <span class="px-3 font-bold">1</span>
+                            <span class="text-[#ff8300] font-extrabold text-[30px]">+</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button class="bg-[#ff8300] hover:bg-orange-800 px-2 py-1 text-white rounded-2xl transition-all">Səbətə at</button>
+                            <i class="fa-solid text-[#ff8300] rounded-md  p-1 fa-heart hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                            <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                        </div>
+                    </div>
+                </article>
+              </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <script src="../services/api.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/header.js"></script>
+</body>
+
+</html>

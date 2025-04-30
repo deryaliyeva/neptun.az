@@ -1,6 +1,8 @@
 const openCloseTop = document.getElementById('openCloseTop')
 const openCloseBottom = document.getElementById('openCloseBottom')
 
+const activeSlide = 1
+
 function openSidebarTop() {
   openCloseBottom.classList.remove('left-0')
   openCloseBottom.classList.add('left-[-100%]')
@@ -37,6 +39,7 @@ function openSidebarBottom() {
 
 function slideShow(id, data) {
   const elem = document.getElementById(id)
+  elem.innerHTML = ''
   data.map(item => {
     // console.log(data);
     
@@ -62,3 +65,12 @@ function slideShow(id, data) {
   })
 }
 
+swiper3.on('slideChange', (swipers) => {
+    const activeElement = swipers.slides[swiper.realIndex].id
+   if( activeElement != activeSlide){
+    getProdByCatId(activeElement).then(data =>{
+      slideShow('categorySlider', data.products)
+    })
+   }
+    activeSlide = activeElement
+})

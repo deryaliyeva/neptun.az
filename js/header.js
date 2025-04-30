@@ -59,7 +59,7 @@ function handleCategory() {
                                     ${item.subcategory.length > 0 ? 
                                         `<div class="absolute top-0 left-full border-l-orange-500 border-l-2 w-0 max-h-0 overflow-hidden bg-white shadow-2xl text-[11px] text-black opacity-0 translate-x-[-10px] transition-all duration-300 ease-in-out group-hover:w-[160px] group-hover:max-h-[500px] group-hover:p-2 group-hover:opacity-100 group-hover:translate-x-0">
                                             ${item.subcategory.map(sub => {
-                                                return `<p class="px-2 py-1 text-[14px] hover:text-[#ff8230] capitalize hover:underline">${sub.categoryName}</p>`
+                                                return `<a href="/pages/category.htm?id=${sub.id}" class="block px-2 py-1 text-[14px] hover:text-[#ff8230] capitalize hover:underline">${sub.categoryName}</a>`
                                             }).join("")}
                                         </div>`: ''                                           
                                     }
