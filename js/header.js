@@ -1,6 +1,25 @@
+const openCloseTop = document.getElementById('openCloseTop')
+const openCloseBottom = document.getElementById('openCloseBottom')
+
 const cache = JSON.parse(localStorage.getItem("categoryArr"))
 const categoryArr = cache || []
 const menu = document.getElementById('menu')
+
+function openSidebarTop() {
+    openCloseBottom.classList.remove('left-0')
+    openCloseBottom.classList.add('left-[-100%]')
+  
+    openCloseTop.classList.toggle('left-0')
+    openCloseTop.classList.toggle('left-[-100%]')
+  }
+  
+  function openSidebarBottom() {
+    openCloseTop.classList.remove('left-0')
+    openCloseTop.classList.add('left-[-100%]')
+  
+    openCloseBottom.classList.toggle('left-0')
+    openCloseBottom.classList.toggle('left-[-100%]')
+  }
 
 const icons = [
     'https://neptun.az/image/catalog/icon-menu/Meyv%C9%99-v%C9%99-t%C9%99r%C9%99v%C9%99z.svg',

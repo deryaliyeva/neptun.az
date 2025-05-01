@@ -9,9 +9,6 @@ let limit = urlLimit || 12;
 let page = urlPage || 1;
 
 function openFilter() {
-    filterDiv.classList.remove('left-0')
-    filterDiv.classList.add('left-[-100%]')
-  
     filterDiv.classList.toggle('left-0')
     filterDiv.classList.toggle('left-[-100%]')
   }
