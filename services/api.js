@@ -34,7 +34,7 @@ async function getProdByCatId(id) {
     return res.json()
 }
 
-async function getProdBySubCatId(id) {
-    const res = await fetch(`${BASE_URL}/products/category/${id}`)
+async function getProdBySubCatId(id, limit = 10, page = 1) {
+    const res = await fetch(`${BASE_URL}/products/category/${id}?limit=${limit}&page=${page}`)
     return res.json()
 }

@@ -67,18 +67,14 @@
                             </a>
                             <span class="min-w-[210px]">Kateqoriyalar</span>
                         </div>
-                    
-                        <!-- Hover ilə görünəcək menyu -->
                         <ul id="menu" class="absolute top-full left-0 z-50 hidden group-hover:block bg-white rounded-b-md overflow-hidden transition-all min-w-[250px]"></ul>
                     </div>
-
                     <div class="py-[10px] hidden px-[15px] bg-[#ff8230] rounded-b-[7px] flex items-center justify-start">
                         <a href="">
                             <img class="max-w-full w-[16px]" src="../img/Aksiyalar.svg" alt="Aksiyalar" />
                         </a>
                         <span class="text-[12px] text-white px-5 cursor-pointer">Kampaniyalar</span>
                     </div>
-
                 </div>
 
                 <!--alt sidebar-->
@@ -712,15 +708,27 @@
                     </div>
                 </article>
               </div>
+
+              <div class="flex justify-center mt-[20px] mb-[25px] space-x-1 text-gray-800">
+                <button onclick="clickButton(1)" type="button" title="Page 1" class="inline-flex items-center justify-center w-8 h-8 text-sm font-semibold border rounded shadow-md dark:bg-gray-50 border-[#ff8300]">1</button>
+                <button onclick="clickButton(2)" type="button" class="inline-flex items-center justify-center w-8 h-8 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100" title="Page 2">2</button>
+                <button onclick="clickButton(3)" type="button" class="inline-flex items-center justify-center w-8 h-8 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100" title="Page 3">3</button>
+                <button onclick="clickButton(4)" type="button" class="inline-flex items-center justify-center w-8 h-8 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100" title="Page 4">4</button>
+                <button onclick="clickButton(4)" type="button" class="inline-flex items-center justify-center w-8 h-8 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100" title="Page 4">5</button>
+                <button title="next" type="button" class="inline-flex items-center justify-center w-8 h-8 py-0 border rounded-md shadow-md dark:bg-gray-50 dark:border-gray-100">
+                    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="w-4">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+
             </div>
         </section>
-
 
     </main>
 
     <script src="../services/api.js"></script>
-    <script src="../js/index.js"></script>
-    <script src="../js/header.js"></script>
+    <script src="../js/category.js"></script>
 </body>
 
 </html>
