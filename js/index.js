@@ -1,6 +1,6 @@
 
 
-const activeSlide = 1
+let activeSlide = 1;
 
 
 
