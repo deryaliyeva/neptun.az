@@ -482,7 +482,7 @@
 
             <div id="filterDiv" class="h-screen p-4 fixed z-50 top-0 left-[-100%] border min-w-[30%] max-xs:min-w-[100%] bg-white transition-all duration-700 ease-in-out">
 
-                <div onclick="openFilter()" class="px-4 py-4 flex items-center justify-end hover:text-[#ff8300]">
+                <div onclick="openFilters()" class="px-4 py-4 flex items-center justify-end hover:text-[#ff8300]">
                     <i class="text-[13px] fa-solid fa-xmark cursor-pointer"></i>
                   </div>
 
@@ -507,7 +507,7 @@
                 </div>
             </div>
 
-            <button onclick="openFilter()" class="p-1 lg:hidden ml-2">
+            <button onclick="openFilters()" class="p-1 lg:hidden ml-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                     class="w-[43px] h-[37px] p-1 text-white shadow-xl bg-[#ff8230]">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -525,14 +525,12 @@
                     <label class="ml-10" for="">Sırala:</label>
                     <select class="max-w-full min-w-full py-[9px] px-[15px] rounded-2xl" name="" id="">
                         <option class="font-bold" value="">Əsas</option>
-                        <i class="fa-solid fa-angle-down"></i>
                     </select>
                 </div>
                 <div class="flex items-center mb-4 px-3 justify-center gap-2 max-mdx:gap-0">
                     <label for="">Göstər:</label>
                     <select class="max-w-full w-full py-[9px] px-[15px] rounded-2xl" name="" id="">
                         <option class="font-bold" value="">12</option>
-                        <i class="fa-solid fa-angle-down"></i>
                     </select>
                 </div>
 
@@ -544,8 +542,8 @@
                 </div>
               </div>
 
-              <div class="grid grid-cols-4 max-mdx:grid-cols-2 max-sm:grid-cols-1 max-lg:grid-cols-3 gap-4 mb-3">
-                <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
+              <div id="content" class="grid grid-cols-4 max-mdx:grid-cols-2 max-sm:grid-cols-1 max-lg:grid-cols-3 gap-4 mb-3">
+                <!-- <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
                     <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
                     <div class="flex flex-col justify-between p-6 space-y-8">
                         <div class="space-y-2 text-center">
@@ -563,186 +561,10 @@
                             <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
                         </div>
                     </div>
-                </article>
-                <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
-                    <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
-                    <div class="flex flex-col justify-between p-6 space-y-8">
-                        <div class="space-y-2 text-center">
-                            <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">MVT.ALMA FUDJI KG</h2>
-                            <span class="text-[#181818] font-bold text-[20px]">4.49₼</span>
-                        </div>
-                        <div class="text-center">
-                            <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
-                            <span class="px-3 font-bold">1</span>
-                            <span class="text-[#ff8300] font-extrabold text-[30px]">+</span>
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <button class="bg-[#ff8300] hover:bg-orange-800 min-w-20 min-h-8 text-[13px] font-bold text-white rounded-2xl transition-all">Səbətə at</button>
-                            <i class="fa-solid text-[#ff8300] rounded-md  p-1 fa-heart hover:bg-[#ff8300] hover:text-white transition-all"></i>
-                            <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
-                        </div>
-                    </div>
-                </article>
-                <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
-                    <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
-                    <div class="flex flex-col justify-between p-6 space-y-8">
-                        <div class="space-y-2 text-center">
-                            <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">MVT.ALMA FUDJI KG</h2>
-                            <span class="text-[#181818] font-bold text-[20px]">4.49₼</span>
-                        </div>
-                        <div class="text-center">
-                            <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
-                            <span class="px-3 font-bold">1</span>
-                            <span class="text-[#ff8300] font-extrabold text-[30px]">+</span>
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <button class="bg-[#ff8300] hover:bg-orange-800 min-w-20 min-h-8 text-[13px] font-bold text-white rounded-2xl transition-all">Səbətə at</button>
-                            <i class="fa-solid text-[#ff8300] rounded-md  p-1 fa-heart hover:bg-[#ff8300] hover:text-white transition-all"></i>
-                            <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
-                        </div>
-                    </div>
-                </article>
-                <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
-                    <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
-                    <div class="flex flex-col justify-between p-6 space-y-8">
-                        <div class="space-y-2 text-center">
-                            <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">MVT.ALMA FUDJI KG</h2>
-                            <span class="text-[#181818] font-bold text-[20px]">4.49₼</span>
-                        </div>
-                        <div class="text-center">
-                            <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
-                            <span class="px-3 font-bold">1</span>
-                            <span class="text-[#ff8300] font-extrabold text-[30px]">+</span>
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <button class="bg-[#ff8300] hover:bg-orange-800 min-w-20 min-h-8 text-[13px] font-bold text-white rounded-2xl transition-all">Səbətə at</button>
-                            <i class="fa-solid text-[#ff8300] rounded-md  p-1 fa-heart hover:bg-[#ff8300] hover:text-white transition-all"></i>
-                            <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
-                        </div>
-                    </div>
-                </article>
-                <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
-                    <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
-                    <div class="flex flex-col justify-between p-6 space-y-8">
-                        <div class="space-y-2 text-center">
-                            <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">MVT.ALMA FUDJI KG</h2>
-                            <span class="text-[#181818] font-bold text-[20px]">4.49₼</span>
-                        </div>
-                        <div class="text-center">
-                            <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
-                            <span class="px-3 font-bold">1</span>
-                            <span class="text-[#ff8300] font-extrabold text-[30px]">+</span>
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <button class="bg-[#ff8300] hover:bg-orange-800 min-w-20 min-h-8 text-[13px] font-bold text-white rounded-2xl transition-all">Səbətə at</button>
-                            <i class="fa-solid text-[#ff8300] rounded-md  p-1 fa-heart hover:bg-[#ff8300] hover:text-white transition-all"></i>
-                            <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
-                        </div>
-                    </div>
-                </article>
-                <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
-                    <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
-                    <div class="flex flex-col justify-between p-6 space-y-8">
-                        <div class="space-y-2 text-center">
-                            <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">MVT.ALMA FUDJI KG</h2>
-                            <span class="text-[#181818] font-bold text-[20px]">4.49₼</span>
-                        </div>
-                        <div class="text-center">
-                            <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
-                            <span class="px-3 font-bold">1</span>
-                            <span class="text-[#ff8300] font-extrabold text-[30px]">+</span>
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <button class="bg-[#ff8300] hover:bg-orange-800 min-w-20 min-h-8 text-[13px] font-bold text-white rounded-2xl transition-all">Səbətə at</button>
-                            <i class="fa-solid text-[#ff8300] rounded-md  p-1 fa-heart hover:bg-[#ff8300] hover:text-white transition-all"></i>
-                            <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
-                        </div>
-                    </div>
-                </article>
-                <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
-                    <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
-                    <div class="flex flex-col justify-between p-6 space-y-8">
-                        <div class="space-y-2 text-center">
-                            <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">MVT.ALMA FUDJI KG</h2>
-                            <span class="text-[#181818] font-bold text-[20px]">4.49₼</span>
-                        </div>
-                        <div class="text-center">
-                            <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
-                            <span class="px-3 font-bold">1</span>
-                            <span class="text-[#ff8300] font-extrabold text-[30px]">+</span>
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <button class="bg-[#ff8300] hover:bg-orange-800 min-w-20 min-h-8 text-[13px] font-bold text-white rounded-2xl transition-all">Səbətə at</button>
-                            <i class="fa-solid text-[#ff8300] rounded-md  p-1 fa-heart hover:bg-[#ff8300] hover:text-white transition-all"></i>
-                            <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
-                        </div>
-                    </div>
-                </article>
-                <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
-                    <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
-                    <div class="flex flex-col justify-between p-6 space-y-8">
-                        <div class="space-y-2 text-center">
-                            <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">MVT.ALMA FUDJI KG</h2>
-                            <span class="text-[#181818] font-bold text-[20px]">4.49₼</span>
-                        </div>
-                        <div class="text-center">
-                            <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
-                            <span class="px-3 font-bold">1</span>
-                            <span class="text-[#ff8300] font-extrabold text-[30px]">+</span>
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <button class="bg-[#ff8300] hover:bg-orange-800 min-w-20 min-h-8 text-[13px] font-bold text-white rounded-2xl transition-all">Səbətə at</button>
-                            <i class="fa-solid text-[#ff8300] rounded-md  p-1 fa-heart hover:bg-[#ff8300] hover:text-white transition-all"></i>
-                            <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
-                        </div>
-                    </div>
-                </article>
-                <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
-                    <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
-                    <div class="flex flex-col justify-between p-6 space-y-8">
-                        <div class="space-y-2 text-center">
-                            <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">MVT.ALMA FUDJI KG</h2>
-                            <span class="text-[#181818] font-bold text-[20px]">4.49₼</span>
-                        </div>
-                        <div class="text-center">
-                            <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
-                            <span class="px-3 font-bold">1</span>
-                            <span class="text-[#ff8300] font-extrabold text-[30px]">+</span>
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <button class="bg-[#ff8300] hover:bg-orange-800 min-w-20 min-h-8 text-[13px] font-bold text-white rounded-2xl transition-all">Səbətə at</button>
-                            <i class="fa-solid text-[#ff8300] rounded-md  p-1 fa-heart hover:bg-[#ff8300] hover:text-white transition-all"></i>
-                            <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
-                        </div>
-                    </div>
-                </article>
-                <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
-                    <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
-                    <div class="flex flex-col justify-between p-6 space-y-8">
-                        <div class="space-y-2 text-center">
-                            <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">MVT.ALMA FUDJI KG</h2>
-                            <span class="text-[#181818] font-bold text-[20px]">4.49₼</span>
-                        </div>
-                        <div class="text-center">
-                            <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
-                            <span class="px-3 font-bold">1</span>
-                            <span class="text-[#ff8300] font-extrabold text-[30px]">+</span>
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <button class="bg-[#ff8300] hover:bg-orange-800 min-w-20 min-h-8 text-[13px] font-bold text-white rounded-2xl transition-all">Səbətə at</button>
-                            <i class="fa-solid text-[#ff8300] rounded-md  p-1 fa-heart hover:bg-[#ff8300] hover:text-white transition-all"></i>
-                            <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
-                        </div>
-                    </div>
-                </article>
+                </article> -->
               </div>
 
-              <div class="flex justify-center mt-[20px] mb-[25px] space-x-1 text-gray-800">
-                <button onclick="clickButton(1)" type="button" title="Page 1" class="inline-flex items-center justify-center w-8 h-8 text-sm font-semibold border rounded shadow-md dark:bg-gray-50 border-[#ff8300]">1</button>
-                <button onclick="clickButton(2)" type="button" class="inline-flex items-center justify-center hover:bg-[#ff8300] hover:text-white w-8 h-8 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100" title="Page 2">2</button>
-                <button onclick="clickButton(3)" type="button" class="inline-flex items-center justify-center hover:bg-[#ff8300] hover:text-white w-8 h-8 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100" title="Page 3">3</button>
-                <button onclick="clickButton(4)" type="button" class="inline-flex items-center justify-center hover:bg-[#ff8300] hover:text-white w-8 h-8 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100" title="Page 4">4</button>
-                <button onclick="clickButton(5)" type="button" class="inline-flex items-center justify-center hover:bg-[#ff8300] hover:text-white w-8 h-8 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100" title="Page 5">5</button>
+              <div id="btns" class="flex justify-center mt-[20px] mb-[25px] space-x-1 text-gray-800">
                 <button title="next" type="button" class="inline-flex items-center justify-center w-8 h-8 py-0 border rounded-md shadow-md dark:bg-gray-50 dark:border-gray-100">
                     <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="w-4">
                         <polyline points="9 18 15 12 9 6"></polyline>
@@ -754,9 +576,9 @@
         </section>
 
     </main>
-    <script src="../services/api.js"></script>
-    <script src="../js/category.js"></script>
-    <script src="../js/header.js"></script>
+    <!-- <script src="../services/api.js"></script> -->
+    <script type="module" src="../js/category.js"></script>
+    <script type="module" src="../js/header.js"></script>
 </body>
 
 </html>

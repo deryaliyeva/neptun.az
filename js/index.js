@@ -1,8 +1,6 @@
-
+import { getAllProducts, getProdByCatId, getProdByPopular, getProductsByDisc } from "../services/api.js";
 
 let activeSlide = 1;
-
-
 
 (function showDiscounted() {
   getProductsByDisc().then(data => {

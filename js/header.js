@@ -1,3 +1,5 @@
+import { getAllCagetories } from "../services/api.js"
+
 const openCloseTop = document.getElementById('openCloseTop')
 const openCloseBottom = document.getElementById('openCloseBottom')
 
@@ -5,7 +7,7 @@ const cache = JSON.parse(localStorage.getItem("categoryArr"))
 const categoryArr = cache || []
 const menu = document.getElementById('menu')
 
-function openSidebarTop() {
+window.openSidebarTop = function () {
     openCloseBottom.classList.remove('left-0')
     openCloseBottom.classList.add('left-[-100%]')
   
@@ -13,7 +15,7 @@ function openSidebarTop() {
     openCloseTop.classList.toggle('left-[-100%]')
   }
   
-  function openSidebarBottom() {
+window.openSidebarBottom =  function () {
     openCloseTop.classList.remove('left-0')
     openCloseTop.classList.add('left-[-100%]')
   

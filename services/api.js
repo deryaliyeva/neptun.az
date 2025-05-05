@@ -38,3 +38,5 @@ async function getProdBySubCatId(id, limit = 10, page = 1) {
     const res = await fetch(`${BASE_URL}/products/subcategory/${id}?limit=${limit}&page=${page}`)
     return res.json()
 }
+
+export { getAllCagetories, getCagetoryById, getAllProducts, getProductbyById, getProductsByDisc, getProdByPopular, getProdByCatId, getProdBySubCatId }
