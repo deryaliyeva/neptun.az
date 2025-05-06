@@ -1007,6 +1007,10 @@ video {
   width: 100%;
 }
 
+.w-\[208px\] {
+  width: 208px;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
@@ -1041,6 +1045,10 @@ video {
 
 .min-w-full {
   min-width: 100%;
+}
+
+.min-w-24 {
+  min-width: 6rem;
 }
 
 .max-w-\[1100px\] {
@@ -1124,6 +1132,10 @@ video {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .items-center {
@@ -1325,18 +1337,6 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
 }
 
-.border-\[\] {
-  border-color: ;
-}
-
-.border-\[\#\] {
-  border-color: #;
-}
-
-.border-\[\#8300\] {
-  border-color: #8300;
-}
-
 .border-b-\[\#ff8230\] {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(255 130 48 / var(--tw-border-opacity, 1));
@@ -1371,6 +1371,11 @@ video {
   background-color: rgb(255 131 0 / var(--tw-bg-opacity, 1));
 }
 
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+}
+
 .bg-green-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(74 222 128 / var(--tw-bg-opacity, 1));
@@ -1379,11 +1384,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-gray-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
 }
 
 .bg-cover {
@@ -1558,6 +1558,11 @@ video {
   padding-bottom: 9px;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .pb-5 {
   padding-bottom: 1.25rem;
 }
@@ -1699,6 +1704,10 @@ video {
   line-height: 1.25rem;
 }
 
+.text-\[31px\] {
+  font-size: 31px;
+}
+
 .font-\[400\] {
   font-weight: 400;
 }
@@ -1798,6 +1807,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#525252\] {
+  --tw-text-opacity: 1;
+  color: rgb(82 82 82 / var(--tw-text-opacity, 1));
 }
 
 .opacity-0 {
@@ -1919,18 +1933,6 @@ video {
 .hover\:bg-orange-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(154 52 18 / var(--tw-bg-opacity, 1));
-}
-
-.hover\:bg-\[\]:hover {
-  background-color: ;
-}
-
-.hover\:bg-\[\#\]:hover {
-  background-color: #;
-}
-
-.hover\:bg-\[\#ff\]:hover {
-  background-color: #ff;
 }
 
 .hover\:text-\[\#ff8230\]:hover {
@@ -2159,6 +2161,10 @@ video {
     width: 244px;
   }
 
+  .max-xs\:w-\[238px\] {
+    width: 238px;
+  }
+
   .max-xs\:min-w-\[100\%\] {
     min-width: 100%;
   }
@@ -2229,9 +2235,23 @@ video {
   }
 }
 
+@media (min-width: 640px) {
+  .sm\:w-\[50\%\] {
+    width: 50%;
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:hidden {
     display: none;
+  }
+
+  .md\:w-\[46\%\] {
+    width: 46%;
   }
 
   .md\:grid-cols-2 {

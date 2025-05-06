@@ -83,7 +83,36 @@
   height: 100%;
   overflow: hidden;
 }
-
+.displayFlex{
+  display: flex;
+  flex-direction: column;
+  article{
+    display: flex;
+    max-width: 100%;
+    background-color: #F2F2F2;
+    img{
+      width: 270px;
+      height: 270px;
+      margin: 0;
+    }
+    h2{
+      font-size: 18px;
+      font-weight: 400;
+    }
+    div{
+      margin: 0;
+      text-align: start;
+      justify-content: start;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .displayFlex{
+    article{
+      flex-direction: column;
+    }
+  }
+}
 
 
 
