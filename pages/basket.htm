@@ -21,7 +21,8 @@
         <div class="px-[15px] py-[25px] text-gray-800">
             <div class="max-w-[1230px] max-lgs:max-w-[860px] flex justify-between h-16 mx-auto">
                 <div class="flex gap-10 max-xms:gap-5 max-xs:gap-[5px] max-xxs:gap-0">
-                    <a rel="noopener noreferrer" href="/index.htm" aria-label="Back to homepage" class="flex items-center p-2">
+                    <a rel="noopener noreferrer" href="/index.htm" aria-label="Back to homepage"
+                        class="flex items-center p-2">
                         <img class="max-w-full w-[270px] max-sm:max-w-[147px] max-xxs:max-w-[100px] max-xms:max-w-[122px] max-sm:min-h-[40px] min-h-[58px]"
                             src="../img/neptun-logo.png" alt="neptun-logo" />
                     </a>
@@ -59,17 +60,22 @@
         </div>
         <div class="bg-[#ff8230] px-10 max-xs:px-2">
             <div class="max-w-[1200px] flex relative z-50 justify-between h-12 mx-auto">
-                <div class="bg-white max-w-full max-mds:hidden hover:min-w-[230px] min-w-0  hover:min-h-[700px] min-h-0 rounded-[7px] border-t-2 border-b-2 border-b-[#ff8230] border-t-[#ff8230]">
+                <div
+                    class="bg-white max-w-full max-mds:hidden hover:min-w-[230px] min-w-0  hover:min-h-[700px] min-h-0 rounded-[7px] border-t-2 border-b-2 border-b-[#ff8230] border-t-[#ff8230]">
                     <div class="relative group">
-                        <div class="py-[10px] px-[7px] text-[15px] font-[600] text-[#ff8230] cursor-pointer flex items-center min-w-[190px]">
+                        <div
+                            class="py-[10px] px-[7px] text-[15px] font-[600] text-[#ff8230] cursor-pointer flex items-center min-w-[190px]">
                             <a href="#">
                                 <i class="fa-solid text-[20px] px-2 fa-bars"></i>
                             </a>
                             <span class="min-w-[210px]">Kateqoriyalar</span>
                         </div>
-                        <ul id="menu" class="absolute top-full left-0 z-50 hidden group-hover:block bg-white rounded-b-md overflow-hidden transition-all min-w-[250px]"></ul>
+                        <ul id="menu"
+                            class="absolute top-full left-0 z-50 hidden group-hover:block bg-white rounded-b-md overflow-hidden transition-all min-w-[250px]">
+                        </ul>
                     </div>
-                    <div class="py-[10px] hidden px-[15px] bg-[#ff8230] rounded-b-[7px] flex items-center justify-start">
+                    <div
+                        class="py-[10px] hidden px-[15px] bg-[#ff8230] rounded-b-[7px] flex items-center justify-start">
                         <a href="">
                             <img class="max-w-full w-[16px]" src="../img/Aksiyalar.svg" alt="Aksiyalar" />
                         </a>
@@ -420,9 +426,9 @@
                         <i class="fa-regular fa-heart"></i>
                         <i class="fa-solid fa-arrows-rotate"></i>
                         <div>
-                            <i class="fa-solid "></i>
+                            <i class="fa-solid fa-cart-shopping"></i>
                             <span
-                                class="bg-green-400 absolute top-0 text-black py-[1px] px-[5px] rounded-full text-[6px]">0</span>
+                               id="say" class="bg-green-400 absolute top-0 text-black py-[1px] px-[5px] rounded-full text-[6px]">0</span>
                         </div>
                     </div>
 
@@ -437,148 +443,76 @@
             </div>
         </div>
     </header>
+    <main class="max-w-[1200px] mx-auto">
+        <div>
+            <div class="container mx-auto px-4 py-6">
+                <h2 class="text-3xl font-semibold mb-6">Səbət</h2>
+                    <div
+                            class=" mt-8 overflow-hidden shadow ring-1 ring-black ring-opacity-5 sm:-mx-6 md:mx-0 md:rounded-sm">
+                            <table class="min-w-full divide-y divide-gray-300">
+                                <thead class="bg-[#ff8230]">
+                                    <tr class="text-white">
+                                        <th scope="col"
+                                            class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold sm:pl-6">
+                                            Şəkil</th>
+                                        <th scope="col"
+                                            class="hidden px-3 py-3.5 text-left text-sm font-semibold lg:table-cell">
+                                            Məhsul</th>
+                                        <th scope="col"
+                                            class="px-3 py-3.5 text-left text-sm font-semibold sm:table-cell">
+                                            Miqdar</th>
+                                        <th scope="col"
+                                            class="hidden px-3 py-3.5 text-left text-sm font-semibold sm:table-cell">
+                                            Qiymət</th>
+                                        <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold">
+                                            Ümumi qiymət</th>
+                                        <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold">
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200 bg-white" id="basketItems">
+                                    <!-- <tr>
+                                        <td
+                                            class="w-32 py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:w-auto sm:max-w-none sm:pl-6">
+                                            <a href="">
+                                                <img
+                                                    src=""
+                                                    alt="BELLA 935GR NOVA YASIL ZEYTUN TUMLU S/Q"
+                                                    class="md:w-24 w-20 h-[15vh] rounded-md object-cover"></a>
+                                            <dl class="font-normal lg:hidden">
+                                                <dd class="mt-1 text-gray-700">BELLA 935GR NOVA YASIL ZEYTUN TUMLU S/Q</dd>
+                                                <dd class="mt-1 truncate text-gray-500 sm:hidden">8.45 $</dd>
+                                            </dl>
+                                        </td>
+                                        <td class="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell">BELLA 935GR NOVA
+                                            YASIL ZEYTUN TUMLU S/Q</td>
+                                        <td class="px-3 py-4 w-fit text-center text-sm text-gray-500 sm:table-cell">
+                                            <div class="flex items-center">
+                                                <span class="w-[24px] h-[24px] rounded-full py-[3px] px-[5px] text-white text-[13px] bg-[#dd8347]"><i class="fas fa-trash "></i></span>
+                                                <span class="px-2">1 pcs</span>
+                                                <span class="w-[24px] h-[24px] rounded-full py-[3px] px-[5px] text-white text-[13px] bg-[#dd8347]"><i class="fas fa-plus "></i></span>
 
-    <main class="px-5">
-        <div class="text-[#6c6c6c] text-[13px] font-bold max-w-[1200px] mx-auto py-[36px]">
-            <a href="">
-                <span>
-                    Ana Səhifə
-                    <i class="fa-solid text-[10px] px-1 fa-chevron-right"></i>
-                </span>
-            </a>
-            <a href="">
-                <span>
-                    Meyvə, tərəvəz, quru meyvə 
-                    <i class="fa-solid text-[10px] px-1 fa-chevron-right"></i>
-                </span>
-            </a>
-            <a href="">
-                <span>Meyvə</span>
-            </a>
-        </div>
-        
-        <section class="max-w-[1200px] flex flex-row max-lg:flex-col gap-5 mx-auto">
-            <div class="max-w-full max-lg:hidden w-[30%] h-[30%] px-4 py-2 bg-white rounded-xl">
-                <h3 class="text-[#222] mb-1 font-bold text-[11px]">Filtr</h3>
-                <ul class="flex items-center pb-[30px] justify-between border-b-2">
-                    <li><a class="text-[11px] pt-[11px] text-[#444] font-bold" href="">Alt Kateqoriya</a></li>
-                    <i class="fa-solid text-[11px] font-bold fa-angle-down"></i>
-                </ul>
-
-                <ul class="flex items-center pb-[15px] justify-between border-b-2">
-                    <li><a class="text-[11px] pt-[11px] text-[#444] font-bold" href="">Markası</a></li>
-                    <i class="fa-solid text-[11px] font-bold fa-angle-down"></i>
-                </ul>
-
-                <ul class="flex items-center pb-[15px] justify-between border-b-2">
-                    <li><a class="text-[11px] pt-[11px] text-[#444] font-bold" href="">Qiymət</a></li>
-                    <i class="fa-solid text-[11px] font-bold fa-angle-down"></i>
-                </ul>
-
-                <div class="p-5 mx-auto flex items-center justify-center">
-                    <button class="text-[11px] font-bold text-[#fff] py-1 px-[10px] rounded-[15px] bg-[#ff8300]">Hamısını Sıfırla</button>
-                </div>
-            </div>
-
-            <div id="filterDiv" class="h-screen p-4 fixed z-50 top-0 left-[-100%] border min-w-[30%] max-xs:min-w-[100%] bg-white transition-all duration-700 ease-in-out">
-
-                <div onclick="openFilters()" class="px-4 py-4 flex items-center justify-end hover:text-[#ff8300]">
-                    <i class="text-[13px] fa-solid fa-xmark cursor-pointer"></i>
-                  </div>
-
-                <h3 class="text-[#222] mb-1 font-bold text-[11px]">Filtr</h3>
-                <ul class="flex items-center pb-[30px] justify-between border-b-2">
-                    <li><a class="text-[11px] pt-[11px] text-[#444] font-bold" href="">Alt Kateqoriya</a></li>
-                    <i class="fa-solid text-[11px] font-bold fa-angle-down"></i>
-                </ul>
-
-                <ul class="flex items-center pb-[15px] justify-between border-b-2">
-                    <li><a class="text-[11px] pt-[11px] text-[#444] font-bold" href="">Markası</a></li>
-                    <i class="fa-solid text-[11px] font-bold fa-angle-down"></i>
-                </ul>
-
-                <ul class="flex items-center pb-[15px] justify-between border-b-2">
-                    <li><a class="text-[11px] pt-[11px] text-[#444] font-bold" href="">Qiymət</a></li>
-                    <i class="fa-solid text-[11px] font-bold fa-angle-down"></i>
-                </ul>
-
-                <div class="p-5 mx-auto flex items-center justify-center">
-                    <button class="text-[11px] font-bold text-[#fff] py-1 px-[10px] rounded-[15px] bg-[#ff8300] ">Hamısını Sıfırla</button>
-                </div>
-            </div>
-
-            <button onclick="openFilters()" class="p-1 lg:hidden ml-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    class="w-[43px] h-[37px] p-1 text-white shadow-xl bg-[#ff8230]">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-
-            <div class="max-w-full mx-auto w-[70%]">
-              <div class="mdx:flex mdx:items-center justify-between max-mdx:flex-col max-mdx:justify-start">
-                <div class="max-mdx:hidden">
-                    <i onclick="col()" class="fa-solid text-[25px] text-[#ff8300] px-1 fa-border-all"></i>
-                    <i onclick="row()" class="fa-solid text-[25px] text-[#555] px-1 fa-bars"></i>
-                </div>
-                <div class="flex items-center mb-4 px-3 justify-center gap-2 max-mdx:gap-0">
-                    <label class="ml-10" for="">Sırala:</label>
-                    <select class="max-w-full min-w-full py-[9px] px-[15px] rounded-2xl" name="" id="">
-                        <option class="font-bold" value="">Əsas</option>
-                    </select>
-                </div>
-                <div class="flex items-center mb-4 px-3 justify-center gap-2 max-mdx:gap-0">
-                    <label for="">Göstər:</label>
-                    <select class="max-w-full w-full py-[9px] px-[15px] rounded-2xl" name="" id="">
-                        <option class="font-bold" value="">12</option>
-                    </select>
-                </div>
-
-                <div>
-                    <button class="rounded-[20px] mb-4 mx-3 max-mdx:min-w-full text-[11px] text-white p-2 bg-[#ff8300]">
-                        <i class="fa-solid px-1 fa-arrows-rotate"></i>
-                        Müqayisə et
-                    </button>
-                </div>
-              </div>
-
-              <div id="content" class="grid grid-cols-4 max-mdx:grid-cols-2 max-sm:grid-cols-1 max-lg:grid-cols-3 gap-4 mb-3">
-                <!-- <article class="max-w-xs rounded-md dark:bg-gray-50 max-h-full">
-                    <img src="../img/suu.webp" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
-                    <div class="flex flex-col justify-between p-6 space-y-8">
-                        <div class="space-y-2 text-center">
-                            <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">MVT.ALMA FUDJI KG</h2>
-                            <span class="text-[#181818] font-bold text-[20px]">4.49₼</span>
-                        </div>
-                        <div class="text-center">
-                            <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
-                            <span class="px-3 font-bold">1</span>
-                            <span class="text-[#ff8300] font-extrabold text-[30px]">+</span>
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <button class="bg-[#ff8300] hover:bg-orange-800 min-w-20 min-h-8 text-[13px] font-bold text-white rounded-2xl transition-all">Səbətə at</button>
-                            <i class="fa-solid text-[#ff8300] rounded-md  p-1 fa-heart hover:bg-[#ff8300] hover:text-white transition-all"></i>
-                            <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
+                                            </div>
+                                        </td>
+                                        <td class="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">8.45 $</td>
+                                        <td class="px-3 py-4 truncate font-semibold text-sm text-gray-500">8.45 $</td>
+                                        <td class="py-4 pl-3 pr-4  text-sm font-medium sm:pr-6">
+                                            <p class="hover:text-red-600 text-[1.2em] cursor-pointer">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                            </p>
+                                        </td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                </article> -->
-              </div>
-
-              <div id="btns" class="flex justify-center mt-[20px] mb-[25px] space-x-1 text-gray-800">
-                <button title="next" type="button" class="inline-flex items-center justify-center w-8 h-8 py-0 border rounded-md shadow-md dark:bg-gray-50 dark:border-gray-100">
-                    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="w-4">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </button>
+                    <div id="buttom"></div>
             </div>
-
-            </div>
-        </section>
-
     </main>
+
     <!-- <script src="../services/api.js"></script> -->
-    <script type="module" src="../js/category.js"></script>
     <script type="module" src="../js/header.js"></script>
+    <script type="module" src="../js/basket.js"></script>
 </body>
 
 </html>

@@ -29,6 +29,7 @@ window.clickButton = function (x) {
 
 function showCategoryProduct() {
     getProdBySubCatId(id, limit, page).then(mel => {
+        console.log(mel.products);
         showCard(mel.products)
         handleBtn(mel.totalPages)
     })
@@ -39,13 +40,13 @@ function showCard(data) {
     content.innerHTML = ""
     data.map(item => {
         content.innerHTML += `
-                            <a href="/pages/details.htm" class="max-w-xs rounded-md bg-white max-h-full">
-                                    <img src="${item.img[0]}" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500">
+                            <div class="max-w-xs rounded-md bg-white max-h-full">
+                                   <a href="/pages/details.htm?id=${item.id}"><img src="${item.img[0]}" alt="" class="object-cover mx-auto w-32 rounded-t-md h-32 dark:bg-gray-500"></a> 
                                     <div class="flex flex-col justify-between p-6 space-y-8">
-                                        <div class="space-y-2 text-center">
+                                        <a href="/pages/details.htm?id=${item.id}" class="space-y-2 text-center block">
                                             <h2 class="text-[11px] mb-[15px] font-bold hover:text-[#ff8300]">${item.name}</h2>
                                             <span class="text-[#181818] font-bold text-[20px]">${item.price}₼</span>
-                                        </div>
+                                        </a>
                                         <div class="text-center">
                                             <span class="text-[#ff8300] font-extrabold text-[30px]">-</span>
                                             <span class="px-3 font-bold">1</span>
@@ -57,7 +58,7 @@ function showCard(data) {
                                             <i class="fa-solid text-[#ff8300] rounded-md p-1 fa-arrows-rotate hover:bg-[#ff8300] hover:text-white transition-all"></i>
                                         </div>
                                     </div>
-                            </a>
+                            </div>
                                 `
     })
 }
